@@ -1,0 +1,25 @@
+<div style="background:#CCC;height:40px;"></div>
+<h1>radioDisable view</h1>
+
+<br/>
+<br/>
+
+
+<label ng-repeat="person in people" style="margin-bottom:15px;">{{person.name}}
+        <input type="radio" ng-model="$parent.name" name="name" value="{{person.name}}" 
+        ng-click="$parent.selected.radio=$index"
+        required />
+</label>
+
+        <br/>
+        <br/>
+
+        <p>selected:  {{selected.radio}}</p>
+
+        <h1 style="red" ng-show="selected.radio === 1">i've been selected!</h1>
+
+<br/>
+<div textinput ng-disabled="selected.radio != 1"></div>
+
+    <button class="btn" ng-disabled="selected.radio != 1">Submit</button>
+
