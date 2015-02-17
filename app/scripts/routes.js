@@ -24,6 +24,9 @@ angular.module('routes', ['ui.router'])
     },
     radioDisable: {
       name: 'radioDisable'
+    },
+    ngFocus: {
+      name: 'ngFocus'
     }
   })
 
@@ -53,6 +56,10 @@ angular.module('routes', ['ui.router'])
         url: '/radioDisable',
         templateUrl: 'views/radioDisable2.html',
         controller: 'radioDisablingCtrl'
+      })
+      .state(states.ngFocus.name, {
+        url: '/ngFocus',
+        templateUrl: 'views/ng-focus.html'
       });
 
 });
