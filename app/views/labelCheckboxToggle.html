@@ -1,0 +1,57 @@
+<!-- 
+  inspired from:
+
+  http://stackoverflow.com/questions/26962634/ng-change-in-a-checkbox-fired-more-than-one-time-because-an-ng-click-over-it
+
+  http://plnkr.co/edit/AjD9GlA3zjxABix6hegg?p=preview
+-->
+<div class="labelCheckboxToggle">
+  <div style="background:#EEE;height:40px;"></div>
+  <h1>label checkbox toggle</h1>
+
+
+<!--
+  <ul>
+      <li class="odd" ng-click="toggleSelection()" ng-repeat="item in listItems">
+          <label ng-click="$event.stopPropagation()" ng-class="{'suspended': outcome.isSuspended, 'price-increase': outcome.price.hasIncreased(), 'price-decrease': outcome.price.hasDecreased(), 'active': isSelected}" class="ng-scope">
+              <span>{{item.name}}</span>
+              <input type="checkbox" class="mainMarket" ng-change="toggleSelection()" checklist-model="item.isSelected">
+          </label>
+      </li>
+  </ul>
+-->
+
+  <br/>
+  <br/>
+  <p>with checklist-model</p>
+  <div class="with-checklist-model-module">
+    <!--
+    <label ng-repeat="role in roles">
+      <input type="checkbox" checklist-model="user.roles" checklist-value="role.id"> {{role.text}}
+    </label>
+    -->
+    <!--
+    <ul>
+      <li ng-repeat="role in roles" ng-click="toggleSelection()">
+        <label ng-click="$event.stopPropagation()" ng-class="{'active': isSelected}">
+          <input type="checkbox" ng-change="toggleSelection()" checklist-model="role.name" checklist-value="role.id"> {{role.text}}
+        </label>
+
+      </li>
+    </ul>
+    -->
+
+    <label ng-repeat="(key, text) in roles" ng-class="{'active': bingo2}">
+      <input type="checkbox" checklist-change="imChanged(); bingo1 != bingo2" checklist-model="user.roles" checklist-value="key"> {{text}}
+    </label>
+
+
+
+
+
+  </div>
+
+
+  <br/>
+  <br/>
+</div>

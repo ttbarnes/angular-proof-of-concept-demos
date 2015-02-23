@@ -1,0 +1,26 @@
+<!-- 
+  inspired from:
+
+  http://plnkr.co/edit/bSGGa9sWT1hS0WXaROvp?p=preview
+
+-->
+<div class="labelCheckboxToggle">
+  <div style="background:#EEE;height:40px;"></div>
+  <h1>label checkbox toggle 2</h1>
+
+  <ul>
+
+    
+
+    <li ng-repeat="module in modules">
+        <div class="span4 module_card" ng-class="{ checked : isChecked }">
+          <label class="title" for="{{module.title}}">
+         <input id="{{module.title}}" type="checkbox" class="custom_checkbox" ng-model="isChecked">
+         {{module.title}}</label>
+          <p>{{module.description}}</p>
+          <p><a class="btn_addlearning" ng-class="getCardButtonClass(module)" ng-click="addToMyLearning(module)">{{createButtonText(module)}}</a></p>
+        </div>
+      </li>
+  </ul>
+
+</div>

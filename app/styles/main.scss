@@ -45,6 +45,54 @@ body {
   margin: 30px 0;
 }
 
+
+
+
+
+
+
+
+
+.labelCheckboxToggle {
+  border:solid 2px #CCC;
+  label {
+    display:inline-block;
+  }
+
+  .active {
+    border:Solid 3px orange;
+  }
+
+}
+
+.active {
+  border:Solid 3px orange !important;
+}
+
+
+.checked { 
+  background: LightBlue;
+}
+
+/*
+.with-checklist-model-module {
+  li {
+    border:solid 3px #000;
+    margin:1em 0;
+    padding:0.5em;
+    list-style-type:none;
+  }
+  label {
+    display:block;
+    clear:both;
+    width:100%;
+  }
+}
+*/
+
+
+
+
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;

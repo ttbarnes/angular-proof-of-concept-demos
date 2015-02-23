@@ -48,37 +48,75 @@ body {
   margin: 30px 0;
 }
 
+/* line 56, ../../app/styles/main.scss */
+.labelCheckboxToggle {
+  border: solid 2px #CCC;
+}
+/* line 58, ../../app/styles/main.scss */
+.labelCheckboxToggle label {
+  display: inline-block;
+}
+/* line 62, ../../app/styles/main.scss */
+.labelCheckboxToggle .active {
+  border: Solid 3px orange;
+}
+
+/* line 68, ../../app/styles/main.scss */
+.active {
+  border: Solid 3px orange !important;
+}
+
+/* line 73, ../../app/styles/main.scss */
+.checked {
+  background: LightBlue;
+}
+
+/*
+.with-checklist-model-module {
+  li {
+    border:solid 3px #000;
+    margin:1em 0;
+    padding:0.5em;
+    list-style-type:none;
+  }
+  label {
+    display:block;
+    clear:both;
+    width:100%;
+  }
+}
+*/
 /* Main marketing message and sign up button */
-/* line 49, ../../app/styles/main.scss */
+/* line 97, ../../app/styles/main.scss */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 53, ../../app/styles/main.scss */
+/* line 101, ../../app/styles/main.scss */
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Supporting marketing content */
-/* line 60, ../../app/styles/main.scss */
+/* line 108, ../../app/styles/main.scss */
 .marketing {
   margin: 40px 0;
 }
-/* line 63, ../../app/styles/main.scss */
+/* line 111, ../../app/styles/main.scss */
 .marketing p + h4 {
   margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /* line 70, ../../app/styles/main.scss */
+  /* line 118, ../../app/styles/main.scss */
   .container {
     max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
-  /* line 75, ../../app/styles/main.scss */
+  /* line 123, ../../app/styles/main.scss */
   .header,
   .marketing,
   .footer {
@@ -87,45 +125,45 @@ body {
   }
 
   /* Space out the masthead */
-  /* line 82, ../../app/styles/main.scss */
+  /* line 130, ../../app/styles/main.scss */
   .header {
     margin-bottom: 30px;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
-  /* line 86, ../../app/styles/main.scss */
+  /* line 134, ../../app/styles/main.scss */
   .jumbotron {
     border-bottom: 0;
   }
 }
-/* line 91, ../../app/styles/main.scss */
+/* line 139, ../../app/styles/main.scss */
 input[type="radio"] {
   float: left;
 }
 
-/* line 95, ../../app/styles/main.scss */
+/* line 143, ../../app/styles/main.scss */
 label {
   display: block;
 }
 
-/* line 99, ../../app/styles/main.scss */
+/* line 147, ../../app/styles/main.scss */
 input[type="text"],
 .btn {
   padding: 1.5em;
 }
 
-/* line 104, ../../app/styles/main.scss */
+/* line 152, ../../app/styles/main.scss */
 input,
 .btn {
   border: solid 3px #BADA55;
 }
 
-/* line 108, ../../app/styles/main.scss */
+/* line 156, ../../app/styles/main.scss */
 .btn {
   background: #BADA55;
 }
 
-/* line 112, ../../app/styles/main.scss */
+/* line 160, ../../app/styles/main.scss */
 input:disabled,
 .btn:disabled {
   border: solid 3px red;
