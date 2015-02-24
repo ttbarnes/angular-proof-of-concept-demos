@@ -161,3 +161,57 @@ input:disabled,
 .btn:disabled {
   border:solid 3px red;
 }
+
+
+
+ .nav-wrap{
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    border:solid 2px red;
+    @media (min-width:768px) {
+      width:100%;
+      height:auto;
+      border:0 none;
+      overflow:auto;
+    }
+}
+
+ .nav{
+    height: 100%;
+    width: 600px;
+    overflow: auto;
+    padding-right: 20px;
+    @media (min-width:768px) {
+      width:100%;
+      height:auto;
+    }
+}
+
+
+
+.nav {
+  a {
+    background:#CCC;
+    border:solid 1px #333;
+    padding:1em 2em;
+    float:left;
+    @media (min-width:768px) {
+      float:none;
+      padding:1em;
+      border:0 none;
+      display:inline-block;
+    }
+  }
+  br {
+    display:none;
+    @media (min-width:768px) {
+      display:block;
+    }
+  }
+}
+
+
+
+
