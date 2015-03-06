@@ -87,6 +87,18 @@ nav {
 
 
 
+.task-filter-toggle {
+  padding:0;
+  margin:0;
+  li {
+    list-style-type:none;
+    display:inline-block;
+    vertical-align:top;
+    padding:10px;
+    cursor:pointer;
+  }
+}
+
 .task-item {
   float:left;
   width:50%;
