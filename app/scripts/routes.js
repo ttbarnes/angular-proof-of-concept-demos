@@ -18,9 +18,6 @@ angular.module('routes', ['ui.router'])
     labelCheckboxToggle: {
       name: 'labelCheckboxToggle'
     },
-    labelCheckboxToggle2: {
-      name: 'labelCheckboxToggle2'
-    },
     ngRepeatFilterToggle: {
       name: 'ngRepeatFilterToggle'
     }
@@ -54,11 +51,6 @@ angular.module('routes', ['ui.router'])
         url: '/labelCheckboxToggle',
         templateUrl: 'views/labelCheckboxToggle.html',
         controller: 'labelCheckboxToggleCtrl'
-      })
-      .state(states.labelCheckboxToggle2.name, {
-        url: '/labelCheckboxToggle2',
-        templateUrl: 'views/labelCheckboxToggle2.html',
-        controller: 'labelCheckboxToggleCtrl2'
       })
       .state(states.ngRepeatFilterToggle.name, {
         url: '/ngRepeatFilterToggle',
