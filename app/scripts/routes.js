@@ -6,8 +6,8 @@ angular.module('routes', ['ui.router'])
     home: {
       name: 'home'
     },
-    about: {
-      name: 'about'
+    displayDataFromService: {
+      name: 'displayDataFromService'
     },
     radioDisable: {
       name: 'radioDisable'
@@ -33,10 +33,10 @@ angular.module('routes', ['ui.router'])
         url: '/',
         templateUrl: 'views/home.html'
       })
-      .state(states.about.name, {
-        url: '/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .state(states.displayDataFromService.name, {
+        url: '/displayDataFromService',
+        templateUrl: 'views/displayDataFromService.html',
+        controller: 'displayDataFromServiceCtrl'
       })
       .state(states.radioDisable.name, {
         url: '/radioDisable',
