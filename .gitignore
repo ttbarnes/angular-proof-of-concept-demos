@@ -2,3 +2,4 @@ bower_components
 node_modules
 .sass-cache
 .tmp
+app/.htaccess
