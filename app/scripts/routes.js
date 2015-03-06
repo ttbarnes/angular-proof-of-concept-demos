@@ -31,7 +31,7 @@ angular.module('routes', ['ui.router'])
     $stateProvider
       .state(states.home.name, {
         url: '/',
-        templateUrl: 'views/main.html'
+        templateUrl: 'views/home.html'
       })
       .state(states.about.name, {
         url: '/about',
