@@ -1,13 +1,6 @@
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 body {
   padding: 0;
 }
@@ -44,8 +37,6 @@ body {
 .container-narrow > hr {
   margin: 30px 0;
 }
-
-
 
 
 
@@ -163,52 +154,15 @@ input:disabled,
 }
 
 
-
- .nav-wrap{
-    height: 100%;
-    width: 100%;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    border:solid 2px red;
-    @media (min-width:768px) {
-      width:100%;
-      height:auto;
-      border:0 none;
-      overflow:auto;
-    }
-}
-
- .nav{
-    height: 100%;
-    width: 600px;
-    overflow: auto;
-    padding-right: 20px;
-    @media (min-width:768px) {
-      width:100%;
-      height:auto;
-    }
-}
-
-
-
-.nav {
+nav {
   a {
+    display:inline-block;
+    vertical-align:top;
     background:#CCC;
-    border:solid 1px #333;
-    padding:1em 2em;
-    float:left;
-    @media (min-width:768px) {
-      float:none;
-      padding:1em;
-      border:0 none;
-      display:inline-block;
-    }
-  }
-  br {
-    display:none;
-    @media (min-width:768px) {
-      display:block;
-    }
+    color:#111;
+    padding:1em;
+    margin:0 5px 5px 0;
+    text-decoration:none;
   }
 }
 
