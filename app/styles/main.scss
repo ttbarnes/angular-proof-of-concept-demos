@@ -87,4 +87,26 @@ nav {
 
 
 
+.task-item {
+  float:left;
+  width:50%;
+  padding:10px;
+  box-sizing:border-box;
+  
+  .inner {
+    background:#EEE;
+    padding:20px;
+  }
+
+  h4,
+  p {
+    margin:0;
+  }
+  h4 {
+    margin-bottom:5px;
+  }
+
+}
+
+
 
