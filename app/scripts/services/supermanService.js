@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('ajsRouterSeperationApp').factory('supermanService', function() {
-  var users = ['Will', 'Daniel', 'Nina'];
+  var characters = ['Clark Kent', 'Lois Lane', 'Lex Luthor'];
 
   return {
     all: function() {
-      return users;
+      return characters;
     },
     first: function() {
-      return users[0];
+      return characters[0];
     }
   };
 });
