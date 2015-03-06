@@ -3,22 +3,17 @@
 angular.module('ajsRouterSeperationApp')
   .controller('radioDisablingCtrl', function ($scope) {
 
-
     $scope.people = [{
-        name: 'John'
+      name: 'John'
     }, 
     {
-        name: 'Paul'
+      name: 'Paul'
     }, 
     {
-        name: 'George'
+      name: 'George'
     }, 
     {
-        name: 'Ringo'
+      name: 'Ringo'
     }];
-
-    console.log($scope.people);
-
-
 
   });

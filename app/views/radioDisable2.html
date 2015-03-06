@@ -1,24 +1,15 @@
-<h1>radioDisable view</h1>
+<h1>Disable submit unless a certain radio button is selected</h1>
 
-<br/>
-<br/>
+<form>
+  <label ng-repeat="person in people" style="margin-bottom:15px;">{{person.name}}
+    <input type="radio" ng-model="$parent.name" name="name" value="{{person.name}}" 
+    ng-click="$parent.selected.radio=$index"
+    required />
+  </label>
+</form>
 
+<p ng-show="selected.radio >= 0">selected:  {{selected.radio}}</p>
 
-<label ng-repeat="person in people" style="margin-bottom:15px;">{{person.name}}
-        <input type="radio" ng-model="$parent.name" name="name" value="{{person.name}}" 
-        ng-click="$parent.selected.radio=$index"
-        required />
-</label>
+<h4 ng-show="selected.radio === 1">it's selected!</h4>
 
-        <br/>
-        <br/>
-
-        <p>selected:  {{selected.radio}}</p>
-
-        <h1 style="red" ng-show="selected.radio === 1">i've been selected!</h1>
-
-<br/>
-<div textinput ng-disabled="selected.radio != 1"></div>
-
-    <button class="btn" ng-disabled="selected.radio != 1">Submit</button>
-
+<button class="btn" ng-disabled="selected.radio != 1">Submit</button>

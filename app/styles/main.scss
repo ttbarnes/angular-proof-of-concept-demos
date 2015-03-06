@@ -61,7 +61,8 @@ input[type="text"],
 
 input,
 .btn {
-  border:solid 3px #BADA55;
+  border:0 none;
+  color:#FFF;
 }
 .btn {
   background:#BADA55;
@@ -69,7 +70,7 @@ input,
 
 input:disabled,
 .btn:disabled {
-  border:solid 3px red;
+  background:darkred;
 }
 
 
