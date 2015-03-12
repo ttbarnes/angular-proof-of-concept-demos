@@ -6,23 +6,28 @@ angular.module('ajsRouterSeperationApp')
     $scope.tasks = [
       {
          name:'do some washing',
-         status:'todo'
+         status:'todo',
+         specialId:1
       },
       {
          name:'call phone company',
-         status:'todo'
+         status:'todo',
+         specialId:1
       },
       {
          name:'get some tea bags',
-         status:'in-progress'
+         status:'in-progress',
+         specialId:2
       },
       {
          name:'write some code',
-         status:'in-progress'
+         status:'in-progress',
+         specialId:2
       },
       {
          name:'make some tea',
-         status:'complete'
+         status:'complete',
+         specialId:3
       }
     ];
 
