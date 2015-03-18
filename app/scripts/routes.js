@@ -12,11 +12,11 @@ angular.module('routes', ['ui.router'])
     radioDisable: {
       name: 'radioDisable'
     },
-    ngFocus: {
-      name: 'ngFocus'
+    toggleMenuWithNgFocusNgBlur: {
+      name: 'toggleMenuWithNgFocusNgBlur'
     },
-    labelCheckboxToggle: {
-      name: 'labelCheckboxToggle'
+    activeCheckboxLabel: {
+      name: 'activeCheckboxLabel'
     },
     ngRepeatFilterToggle: {
       name: 'ngRepeatFilterToggle'
@@ -39,17 +39,17 @@ angular.module('routes', ['ui.router'])
         controller: 'displayDataFromServiceCtrl'
       })
       .state(states.radioDisable.name, {
-        url: '/radioDisable',
-        templateUrl: 'views/radioDisable2.html',
+        url: '/radio-disable',
+        templateUrl: 'views/radio-disable.html',
         controller: 'radioDisablingCtrl'
       })
-      .state(states.ngFocus.name, {
-        url: '/ngFocus',
-        templateUrl: 'views/ng-focus.html'
+      .state(states.toggleMenuWithNgFocusNgBlur.name, {
+        url: '/toggle-menu-with-ng-focus-and-ng-blur',
+        templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html'
       })
-      .state(states.labelCheckboxToggle.name, {
-        url: '/labelCheckboxToggle',
-        templateUrl: 'views/labelCheckboxToggle.html',
+      .state(states.activeCheckboxLabel.name, {
+        url: '/active-checkbox-label',
+        templateUrl: 'views/activeCheckboxLabel.html',
         controller: 'labelCheckboxToggleCtrl'
       })
       .state(states.ngRepeatFilterToggle.name, {
