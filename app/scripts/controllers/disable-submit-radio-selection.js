@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ajsRouterSeperationApp')
-  .controller('radioDisablingCtrl', function ($scope) {
+  .controller('disableSubmitRadioSelectionCtrl', function ($scope) {
 
     $scope.people = [{
       name: 'John'

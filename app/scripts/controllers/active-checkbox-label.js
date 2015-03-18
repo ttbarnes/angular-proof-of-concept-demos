@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ajsRouterSeperationApp')
-  .controller('labelCheckboxToggleCtrl', function ($scope) {
+  .controller('activeCheckboxLabelCtrl', function ($scope) {
 
       $scope.modules = [
         { 

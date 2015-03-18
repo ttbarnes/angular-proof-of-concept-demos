@@ -6,11 +6,11 @@ angular.module('routes', ['ui.router'])
     home: {
       name: 'home'
     },
-    displayDataFromService: {
-      name: 'displayDataFromService'
+    displayDataFromAService: {
+      name: 'displayDataFromAService'
     },
-    radioDisable: {
-      name: 'radioDisable'
+    disableSubmitRadioSelection: {
+      name: 'disableSubmitRadioSelection'
     },
     toggleMenuWithNgFocusNgBlur: {
       name: 'toggleMenuWithNgFocusNgBlur'
@@ -25,23 +25,22 @@ angular.module('routes', ['ui.router'])
 
   .config(function($stateProvider, $urlRouterProvider, states) {
 
-   // For any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise('/');
-    //
+
     $stateProvider
       .state(states.home.name, {
         url: '/',
         templateUrl: 'views/home.html'
       })
-      .state(states.displayDataFromService.name, {
-        url: '/displayDataFromService',
-        templateUrl: 'views/displayDataFromService.html',
-        controller: 'displayDataFromServiceCtrl'
+      .state(states.displayDataFromAService.name, {
+        url: '/displayDataFromAService',
+        templateUrl: 'views/display-data-from-a-service.html',
+        controller: 'displayDataFromAServiceCtrl'
       })
-      .state(states.radioDisable.name, {
+      .state(states.disableSubmitRadioSelection.name, {
         url: '/radio-disable',
-        templateUrl: 'views/radio-disable.html',
-        controller: 'radioDisablingCtrl'
+        templateUrl: 'views/disable-submit-radio-selection.html',
+        controller: 'disableSubmitRadioSelectionCtrl'
       })
       .state(states.toggleMenuWithNgFocusNgBlur.name, {
         url: '/toggle-menu-with-ng-focus-and-ng-blur',
@@ -50,11 +49,11 @@ angular.module('routes', ['ui.router'])
       .state(states.activeCheckboxLabel.name, {
         url: '/active-checkbox-label',
         templateUrl: 'views/activeCheckboxLabel.html',
-        controller: 'labelCheckboxToggleCtrl'
+        controller: 'activeCheckboxLabelCtrl'
       })
       .state(states.ngRepeatFilterToggle.name, {
-        url: '/ngRepeatFilterToggle',
-        templateUrl: 'views/ngRepeatFilterToggle.html',
+        url: '/ng-repeat-filter-toggle',
+        templateUrl: 'views/ng-repeat-filter-toggle.html',
         controller: 'ngRepeatFilterToggleCtrl'
       })
 
