@@ -4,9 +4,34 @@
 body {
   padding:10px;
   margin:0;
+  font-family:helvetica, arial;
+  color:#111;
 }
 
 
+a {
+  color:#111;
+}
+
+.home-nav {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  li {
+    padding:0 0 10px 0;
+    &:last-child {
+      padding-bottom:0;
+    }
+  }
+  a {
+    font-weight:bold;
+    text-decoration:none;
+    &:hover,
+    &:focus {
+      text-decoration:underline;
+    }
+  }
+}
 
 
 .labelCheckboxToggle {
@@ -74,28 +99,14 @@ input:disabled,
 }
 
 
-nav {
-  a {
-    display:inline-block;
-    vertical-align:top;
-    background:#CCC;
-    color:#111;
-    padding:1em;
-    margin:0 5px 5px 0;
-    text-decoration:none;
-  }
-}
-
-
-
 .task-filter-toggle {
-  padding:0;
+  padding:0 0 10px;
   margin:0;
   li {
     list-style-type:none;
     display:inline-block;
     vertical-align:top;
-    padding:10px;
+    padding:0 10px;
     cursor:pointer;
   }
 }
