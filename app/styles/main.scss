@@ -8,9 +8,37 @@ body {
   color:#111;
 }
 
+header {
+  border-bottom:solid 3px #EEE;
+  margin-bottom:30px;
+}
+
+h1,
+h2 {
+  margin:{
+    top:0;
+    bottom:10px;
+  }
+}
+
+h1 {
+  font-size:18px;
+}
+
+h2 {
+  font:{
+    size:16px;
+    weight:normal;
+  }
+}
 
 a {
   color:#111;
+  text-decoration:none;
+  &:hover,
+  &:focus {
+    text-decoration:underline;
+  }
 }
 
 .home-nav {
@@ -24,11 +52,6 @@ a {
   }
   a {
     font-weight:normal;
-    text-decoration:none;
-    &:hover,
-    &:focus {
-      text-decoration:underline;
-    }
   }
 }
 

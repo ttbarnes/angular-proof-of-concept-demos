@@ -33,7 +33,7 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/home.html'
       })
       .state(states.displayDataFromAService.name, {
-        url: '/displayDataFromAService',
+        url: '/display-data-from-a-service',
         templateUrl: 'views/display-data-from-a-service.html',
         controller: 'displayDataFromAServiceCtrl'
       })
@@ -48,7 +48,7 @@ angular.module('routes', ['ui.router'])
       })
       .state(states.activeCheckboxLabel.name, {
         url: '/active-checkbox-label',
-        templateUrl: 'views/activeCheckboxLabel.html',
+        templateUrl: 'views/active-checkbox-label.html',
         controller: 'activeCheckboxLabelCtrl'
       })
       .state(states.ngRepeatFilterToggle.name, {

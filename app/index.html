@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="ajsRouterSeperationApp">
+  <body ng-app="proofOfConceptDemos">
 
-    <nav>
-        <a ui-sref="home"><strong>Angular proof of concept demos</strong></a>
-    </nav>
-
-    <hr>
+    <header>
+        <nav>
+            <h1><a ui-sref="home"><strong>Angular proof of concept demos</strong></a></h1>
+            <h2>page title</h2>
+        </nav>
+    </header>
 
     <div ui-view></div>
 
@@ -40,16 +41,12 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/routes.js"></script>
-    <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/display-data-from-a-service.js"></script>
     <script src="scripts/controllers/disable-submit-radio-selection.js"></script>
     <script src="scripts/controllers/active-checkbox-label.js"></script>
     <script src="scripts/controllers/ng-repeat-filter-toggle.js"></script>
 
-    <script src="scripts/directives/textinput.js"></script>
-
     <script src="scripts/services/supermanService.js"></script>
-    <script src="scripts/services/textInputData.js"></script>
       <!-- endbuild -->
 </body>
 </html>

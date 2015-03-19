@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ajsRouterSeperationApp')
+angular.module('proofOfConceptDemos')
   .controller('activeCheckboxLabelCtrl', function ($scope) {
 
       $scope.items = [

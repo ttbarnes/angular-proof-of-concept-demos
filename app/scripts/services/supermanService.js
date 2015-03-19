@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('ajsRouterSeperationApp').factory('supermanService', function() {
+angular.module('proofOfConceptDemos').factory('supermanService', function() {
+  
   var characters = ['Clark Kent', 'Lois Lane', 'Lex Luthor'];
 
   return {
