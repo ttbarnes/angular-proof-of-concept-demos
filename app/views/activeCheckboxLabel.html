@@ -9,13 +9,13 @@
 
   <ul>
 
-    <li ng-repeat="module in modules">
+    <li ng-repeat="item in items">
         <div class="span4 module_card" ng-class="{ checked : isChecked }">
-          <label class="title" for="{{module.title}}">
-         <input id="{{module.title}}" type="checkbox" class="custom_checkbox" ng-model="isChecked">
-         {{module.title}}</label>
-          <p>{{module.description}}</p>
-          <p><a class="btn_addlearning" ng-class="getCardButtonClass(module)" ng-click="addToMyLearning(module)">{{createButtonText(module)}}</a></p>
+          <label class="title" for="{{item.title}}">
+         <input id="{{item.title}}" type="checkbox" class="custom_checkbox" ng-model="isChecked">
+         {{item.title}}</label>
+          <p>{{item.description}}</p>
+          <p><a class="btn_addlearning" ng-class="getCardButtonClass(item)" ng-click="addToMyLearning(item)">{{createButtonText(item)}}</a></p>
         </div>
       </li>
   </ul>

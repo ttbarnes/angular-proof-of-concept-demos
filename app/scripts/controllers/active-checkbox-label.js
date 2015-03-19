@@ -3,18 +3,18 @@
 angular.module('ajsRouterSeperationApp')
   .controller('activeCheckboxLabelCtrl', function ($scope) {
 
-      $scope.modules = [
+      $scope.items = [
         { 
-          title: 'Module 1', 
-          description: 'Description 1' 
+          title: 'item 1', 
+          description: 'description 1' 
         },
         { 
-          title: 'Module 2', 
-          description: 'Description 2' 
+          title: 'item 2', 
+          description: 'description 2' 
         },
         { 
-          title: 'Module 3', 
-          description: 'Description 3' 
+          title: 'item 3', 
+          description: 'description 3' 
         }
       ];
 
