@@ -35,26 +35,41 @@ angular.module('routes', ['ui.router'])
       .state(states.displayDataFromAService.name, {
         url: '/display-data-from-a-service',
         templateUrl: 'views/display-data-from-a-service.html',
-        controller: 'displayDataFromAServiceCtrl'
+        controller: 'displayDataFromAServiceCtrl',
+        data: {
+          pageTitle: 'display data from a service'
+        }
       })
       .state(states.disableSubmitRadioSelection.name, {
         url: '/radio-disable',
         templateUrl: 'views/disable-submit-radio-selection.html',
-        controller: 'disableSubmitRadioSelectionCtrl'
+        controller: 'disableSubmitRadioSelectionCtrl',
+        data: {
+          pageTitle: 'disable submit until certain radio button is selected'
+        }
       })
       .state(states.toggleMenuWithNgFocusNgBlur.name, {
         url: '/toggle-menu-with-ng-focus-and-ng-blur',
-        templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html'
+        templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html',
+        data: {
+          pageTitle: 'toggle menu with ng-focus and ng-blur'
+        }
       })
       .state(states.activeCheckboxLabel.name, {
         url: '/active-checkbox-label',
         templateUrl: 'views/active-checkbox-label.html',
-        controller: 'activeCheckboxLabelCtrl'
+        controller: 'activeCheckboxLabelCtrl',
+        data: {
+          pageTitle: 'active checkbox label'
+        }
       })
       .state(states.ngRepeatFilterToggle.name, {
         url: '/ng-repeat-filter-toggle',
         templateUrl: 'views/ng-repeat-filter-toggle.html',
-        controller: 'ngRepeatFilterToggleCtrl'
+        controller: 'ngRepeatFilterToggleCtrl',
+        data: {
+          pageTitle: 'ng-repeat filter toggle'
+        }
       })
 
 });
