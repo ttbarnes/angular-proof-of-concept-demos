@@ -1,7 +1,14 @@
-# angular-testing-pocs
-Bit messy in places at the moment
+# Angular proof of concept demos
+POC demos with pure angular
 
+## Getting started
 
-`bower install && npm install`
+1) Fork a copy to your machine
 
-`grunt serve`
+2) Install the dependancies: `bower install && npm install`
+
+3) Run the app: `grunt serve`
+
+## Contributions
+
+Always welcome, please submit a PR :-)
