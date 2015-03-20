@@ -3,7 +3,7 @@
 describe('Controller: activeCheckboxLabelCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('ajsRouterSeperationApp'));
+  beforeEach(module('proofOfConceptDemos'));
 
   var activeCheckboxLabelCtrl,
     scope;
