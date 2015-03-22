@@ -9,6 +9,9 @@ POC demos with pure angular
 
 3) Run the app: `grunt serve`
 
+4) Run the tests: `grunt test`
+
+
 ## Contributions
 
 Always welcome, please submit a PR :-)
