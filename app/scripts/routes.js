@@ -21,6 +21,9 @@ angular.module('routes', ['ui.router'])
     ngRepeatFilterToggle: {
       name: 'ngRepeatFilterToggle'
     },
+    nestedNgRepeat: {
+      name: 'nestedNgRepeat'
+    },
     error: {
       name: 'error'
     }
@@ -70,6 +73,14 @@ angular.module('routes', ['ui.router'])
         url: '/ng-repeat-filter-toggle',
         templateUrl: 'views/ng-repeat-filter-toggle.html',
         controller: 'ngRepeatFilterToggleCtrl',
+        data: {
+          pageTitle: 'ng-repeat filter toggle'
+        }
+      })
+      .state(states.nestedNgRepeat.name, {
+        url: '/nested-ng-repeat',
+        templateUrl: 'views/nested-ng-repeat.html',
+        controller: 'nestedNgRepeatCtrl',
         data: {
           pageTitle: 'ng-repeat filter toggle'
         }
