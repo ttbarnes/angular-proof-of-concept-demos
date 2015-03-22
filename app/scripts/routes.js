@@ -20,12 +20,15 @@ angular.module('routes', ['ui.router'])
     },
     ngRepeatFilterToggle: {
       name: 'ngRepeatFilterToggle'
+    },
+    error: {
+      name: 'error'
     }
   })
 
   .config(function($stateProvider, $urlRouterProvider, states) {
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/error');
 
     $stateProvider
       .state(states.home.name, {
@@ -69,6 +72,13 @@ angular.module('routes', ['ui.router'])
         controller: 'ngRepeatFilterToggleCtrl',
         data: {
           pageTitle: 'ng-repeat filter toggle'
+        }
+      })
+      .state(states.error.name, {
+        url: '/error',
+        templateUrl: 'views/error.html',
+        data: {
+          pageTitle: 'Whoops!'
         }
       })
 
