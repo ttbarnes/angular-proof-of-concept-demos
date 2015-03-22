@@ -16,12 +16,7 @@
   </head>
   <body ng-app="proofOfConceptDemos">
 
-    <header>
-        <nav>
-            <h1><a ui-sref="home"><strong>Angular proof of concept demos</strong></a></h1>
-            <h2 ng-bind="$state.current.data.pageTitle"></h2>
-        </nav>
-    </header>
+    <header ng-include="'views/partials/header.html'"></header>
 
     <div ui-view></div>
 
