@@ -3,6 +3,7 @@
 angular.module('proofOfConceptDemos')
   .directive('activeHover', function () {
     return {
+      restrict: 'A',
       link: function(scope, elem){
         scope.$watch(elem,function(){
           elem.bind('mouseover', function(){
