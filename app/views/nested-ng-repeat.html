@@ -1,5 +1,24 @@
-<ul>
+<p>2 level nesting:</p>
+<ol>
   <li ng-repeat="fruit in fruits">
-    {{fruit.name}}
+    <strong>{{fruit.name}}</strong>
+    <ul ng-repeat="info in fruit.info">
+        <li>color: <i>{{info.color}}</i></li>
+        <li>size: <i>{{info.size}}</i></li>
+    </ul>
   </li>
-</ul>
+</ol>
+
+<p>3 level nesting:</p>
+<ol>
+  <li ng-repeat="fruit in fruits">
+    <strong>{{fruit.name}}</strong>
+    <ul ng-repeat="info in fruit.info">
+        <li>color: <i>{{info.color}}</i></li>
+        <li>size: <i>{{info.size}}</i></li>
+        <ul ng-repeat="additionalInfo in info.additionalInfo">
+          <li>purchased: <i>{{additionalInfo.purchase}}</i></li>
+      </ul>
+    </ul>
+  </li>
+</ol>
