@@ -27,6 +27,9 @@ angular.module('routes', ['ui.router'])
     activeHoverDirective: {
       name: 'activeHoverDirective'
     },
+    formValidation: {
+      name: 'formValidation'
+    },
     error: {
       name: 'error'
     }
@@ -93,6 +96,14 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/active-hover-directive.html',
         data: {
           pageTitle: 'active hover directive'
+        }
+      })
+      .state(states.formValidation.name, {
+        url: '/form-validation',
+        templateUrl: 'views/form-validation.html',
+        controller: 'formValidationCtrl',
+        data: {
+          pageTitle: 'form validation'
         }
       })
       .state(states.error.name, {

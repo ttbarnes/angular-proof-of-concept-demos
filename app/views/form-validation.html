@@ -1,0 +1,30 @@
+<form name="signupForm">
+
+  <div class="row">
+    <label for="userName">name</label>
+    <input name="userName" 
+           type="text"
+           ng-model="userName" 
+           required>
+    <span class="error" 
+          ng-show="signupForm.userName.$invalid">Required!</span><br/>
+  </div>
+
+  <div class="row">
+    <label for="userNumber">special number</label>
+    <input name="userNumber" 
+           type="number"
+           ng-model="userNumber" 
+           required>
+    <span class="error" 
+          ng-show="signupForm.userNumber.$invalid">This field should only contain numbers.</span><br/>
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+
+  <p ng-show="!!signupForm.$error.required">Errors are present.</p>
+  <p ng-hide="signupForm.$error.required"><strong>Congratulations! All fields have been entered correctly.</strong></p>
+
+</form>
