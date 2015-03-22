@@ -19,6 +19,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // bower:js
+      'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
@@ -26,6 +27,7 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/checklist-model/checklist-model.js',
+      'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
@@ -35,6 +37,7 @@ module.exports = function(config) {
 
     // list of files / patterns to exclude
     exclude: [
+
     ],
 
     // web server port
