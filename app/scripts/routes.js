@@ -24,6 +24,9 @@ angular.module('routes', ['ui.router'])
     nestedNgRepeat: {
       name: 'nestedNgRepeat'
     },
+    activeHoverDirective: {
+      name: 'activeHoverDirective'
+    },
     error: {
       name: 'error'
     }
@@ -83,6 +86,13 @@ angular.module('routes', ['ui.router'])
         controller: 'nestedNgRepeatCtrl',
         data: {
           pageTitle: 'nested ng-repeat'
+        }
+      })
+      .state(states.activeHoverDirective.name, {
+        url: '/active-hover-directive',
+        templateUrl: 'views/active-hover-directive.html',
+        data: {
+          pageTitle: 'active hover directive'
         }
       })
       .state(states.error.name, {
