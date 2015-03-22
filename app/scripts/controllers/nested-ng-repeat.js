@@ -27,7 +27,7 @@ angular.module('proofOfConceptDemos')
       {
         name: 'pineapple',
         info:[{
-          color: 'yellow or green',
+          color: 'yellow and green',
           size: 'medium',
           additionalInfo:[{
             purchase:'singular'
