@@ -16,7 +16,13 @@ describe('Controller: displayDataFromAServiceCtrl', function () {
     });
   }));
 
-  it('should render some characters that come from supermanService', function(){
+
+  it('should have injected supermanService', inject(function(supermanService){
+    expect(supermanService.all()).toBeDefined();
+    expect(supermanService.all().length).toEqual(3);
+  }));
+
+  it('should render characters in the scope, that come from supermanService', function(){
     expect(scope.supermanCharacters).toBeDefined();
   });
 
