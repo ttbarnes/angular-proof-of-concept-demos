@@ -82,7 +82,7 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/nested-ng-repeat.html',
         controller: 'nestedNgRepeatCtrl',
         data: {
-          pageTitle: 'ng-repeat filter toggle'
+          pageTitle: 'nested ng-repeat'
         }
       })
       .state(states.error.name, {
