@@ -20,7 +20,7 @@ describe('Directive: activeHover', function () {
     //mock request to html
     httpBackend.whenGET('my.html').respond('gotIt');
     scope = rootScope.$new();
-    template = compile('<div active-hover id="test-element-1"> </div>' + '<div active-hover id="test-element-2"> </div>')(scope);
+    template = compile('<div active-hover></div>' + '<div active-hover></div>')(scope);
     scope.$digest();
   }));
 
@@ -32,11 +32,25 @@ describe('Directive: activeHover', function () {
   });
 
   describe('events', function() {
-    it('should add a class on mouseover', function() {
-      //$('#test-element-1').trigger('mouseover');
-      //expect($('#test-element-1')).toHaveClass('active-hover');
-
+    it('should add an active class on mouseover', function() {
+      template.trigger('mouseover');
+      expect(template).toHaveClass('active-hover');
+      expect(template).not.toHaveClass('inactive-hover');
     });
+
+    it('should remove active class on mouseout', function() {
+      template.trigger('mouseover');
+      expect(template).toHaveClass('active-hover');
+      template.trigger('mouseout');
+      expect(template).not.toHaveClass('active-hover');
+    });
+
+    it('should only add an active class to one element on mouseover', function() {
+      template.eq(1).trigger('mouseover');
+      expect(template.eq(1)).toHaveClass('active-hover');
+      expect(template.eq(0)).not.toHaveClass('active-hover');
+    });
+
   });
 
 
