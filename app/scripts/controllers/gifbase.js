@@ -3,7 +3,7 @@
 angular.module('proofOfConceptDemos')
   .controller('gifbaseCtrl', function ($scope, gifbaseService) {
 
-    gifbaseService.getTheGifs().then(function (data) {
+    gifbaseService.gifbase().then(function (data) {
       $scope.gifs = data.gifs;
     });
 
