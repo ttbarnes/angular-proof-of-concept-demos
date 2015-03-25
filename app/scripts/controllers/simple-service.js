@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('proofOfConceptDemos')
-  .controller('displayDataFromAServiceCtrl', function ($scope, simpleService) {
+  .controller('simpleServiceCtrl', function ($scope, simpleService) {
 
     $scope.supermanCharacters = simpleService.all();
 

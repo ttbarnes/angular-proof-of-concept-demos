@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: displayDataFromAServiceCtrl', function () {
+describe('Controller: simpleServiceCtrl', function () {
 
   // load the controller's module
   beforeEach(module('proofOfConceptDemos'));
@@ -11,7 +11,7 @@ describe('Controller: displayDataFromAServiceCtrl', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    displayDataFromAServiceCtrl = $controller('displayDataFromAServiceCtrl', {
+    displayDataFromAServiceCtrl = $controller('simpleServiceCtrl', {
       $scope: scope
     });
   }));

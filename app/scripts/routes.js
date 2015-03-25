@@ -45,11 +45,11 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/home.html'
       })
       .state(states.displayDataFromAService.name, {
-        url: '/display-data-from-a-service',
-        templateUrl: 'views/display-data-from-a-service.html',
-        controller: 'displayDataFromAServiceCtrl',
+        url: '/simple-service',
+        templateUrl: 'views/simple-service.html',
+        controller: 'simpleServiceCtrl',
         data: {
-          pageTitle: 'display data from a service'
+          pageTitle: 'simple service'
         }
       })
       .state(states.disableSubmitRadioSelection.name, {
