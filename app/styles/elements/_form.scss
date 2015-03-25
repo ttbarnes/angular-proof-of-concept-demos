@@ -6,18 +6,14 @@ label {
   display:block;
 }
 
-input[type="text"],
-.btn {
-  padding:1.5em;
-}
-
 input,
 .btn {
-  border:0 none;
-  color:#FFF;
+  padding:1em;
 }
+
 .btn {
   background:#BADA55;
+  color:#FFF;
 }
 
 input:disabled,
@@ -36,18 +32,4 @@ label {
 input[type="text"],
 .btn {
   padding:1.5em;
-}
-
-input,
-.btn {
-  border:0 none;
-  color:#FFF;
-}
-.btn {
-  background:#BADA55;
-}
-
-input:disabled,
-.btn:disabled {
-  background:darkred;
 }

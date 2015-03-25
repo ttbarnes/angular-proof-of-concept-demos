@@ -1,4 +1,4 @@
 <nav>
   <h1><a ui-sref="home"><strong>Angular proof of concept demos</strong></a></h1>
-  <h2 ng-bind="$state.current.data.pageTitle"></h2>
+  <h2 ng-show="$state.current.data.pageTitle" ng-bind="$state.current.data.pageTitle"></h2>
 </nav>
