@@ -1,0 +1,32 @@
+.home-nav {
+  margin:0;
+  padding:0;
+  > li {
+    list-style-type:none;
+    padding:{
+      bottom:10px;
+      left:0;
+    }
+    strong {
+      display:inline-block;
+      background:#E4E4E4;
+      padding:10px;
+    }
+  }
+  > ol {
+    font-size:14px;
+    padding:{
+      bottom:20px;
+      left:32px;
+    }
+    &:last-child {
+      padding-bottom:0;
+    }
+    > li {
+      padding-bottom:10px;
+    }
+  }
+  a {
+    font-weight:normal;
+  }
+}

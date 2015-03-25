@@ -1,0 +1,28 @@
+h1,
+h2 {
+  margin:{
+    top:0;
+    bottom:10px;
+  }
+}
+
+h1 {
+  font-size:18px;
+}
+
+h2 {
+  font:{
+    size:16px;
+    weight:normal;
+  }
+  margin-bottom:0;
+}
+
+a {
+  color:#111;
+  text-decoration:none;
+  &:hover,
+  &:focus {
+    text-decoration:underline;
+  }
+}

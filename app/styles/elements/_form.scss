@@ -1,0 +1,53 @@
+input[type="radio"] {
+  float:left;
+}
+
+label {
+  display:block;
+}
+
+input[type="text"],
+.btn {
+  padding:1.5em;
+}
+
+input,
+.btn {
+  border:0 none;
+  color:#FFF;
+}
+.btn {
+  background:#BADA55;
+}
+
+input:disabled,
+.btn:disabled {
+  background:darkred;
+}
+
+input[type="radio"] {
+  float:left;
+}
+
+label {
+  display:block;
+}
+
+input[type="text"],
+.btn {
+  padding:1.5em;
+}
+
+input,
+.btn {
+  border:0 none;
+  color:#FFF;
+}
+.btn {
+  background:#BADA55;
+}
+
+input:disabled,
+.btn:disabled {
+  background:darkred;
+}

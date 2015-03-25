@@ -15,17 +15,16 @@
     <!-- endbuild -->
   </head>
   <body ng-app="proofOfConceptDemos">
+    <div class="wrapper">
 
-    <header ng-include="'views/partials/header.html'"></header>
+        <header ng-include="'views/partials/header.html'"></header>
 
-    <div ui-view></div>
+        <div class="main-content">
+            <div ui-view></div>
+        </div>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <footer ng-include="'views/partials/footer.html'"></footer>
+        <footer ng-include="'views/partials/footer.html'"></footer>
+    </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

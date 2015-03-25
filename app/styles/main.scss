@@ -1,66 +1,16 @@
 // bower:scss
 // endbower
 
-body {
-  padding:10px;
-  margin:0;
-  font-family:helvetica, arial;
-  color:#111;
-}
+@import '_typography';
+@import 'blocks/_layout-containers';
+@import 'blocks/_header';
+@import 'blocks/_footer';
+@import 'blocks/_row';
 
-header {
-  border-bottom:solid 3px #EEE;
-  margin-bottom:30px;
-}
+@import 'elements/_form';
 
-.row {
-  clear:both;
-  width:100%;
-  padding:10px 0;
-  border-bottom:solid 1px #EEE;
-}
+@import 'view-specific/_home';
 
-h1,
-h2 {
-  margin:{
-    top:0;
-    bottom:10px;
-  }
-}
-
-h1 {
-  font-size:18px;
-}
-
-h2 {
-  font:{
-    size:16px;
-    weight:normal;
-  }
-}
-
-a {
-  color:#111;
-  text-decoration:none;
-  &:hover,
-  &:focus {
-    text-decoration:underline;
-  }
-}
-
-.home-nav {
-  margin:0;
-  padding:0 0 0 20px;
-  li {
-    padding:0 0 10px 0;
-    &:last-child {
-      padding-bottom:0;
-    }
-  }
-  a {
-    font-weight:normal;
-  }
-}
 
 
 .labelCheckboxToggle {
@@ -98,35 +48,6 @@ a {
   }
 }
 */
-
-
-input[type="radio"] {
-  float:left;
-}
-
-label {
-  display:block;
-}
-
-input[type="text"],
-.btn {
-  padding:1.5em;
-}
-
-input,
-.btn {
-  border:0 none;
-  color:#FFF;
-}
-.btn {
-  background:#BADA55;
-}
-
-input:disabled,
-.btn:disabled {
-  background:darkred;
-}
-
 
 .task-filter-toggle {
   padding:0 0 10px;
@@ -177,24 +98,4 @@ input:disabled,
   opacity:0.4;
 }
 
-
-input {
-  padding:10px;
-  color:#111;
-  border:solid 1px #CCC;
-}
-
-label {
-  float:left;
-  margin-right:20px;
-}
-
-form {
-  max-width:700px;
- //&.ng-invalid {
-  .error {
-    background:darkred;
-    color:#FFF;
-  }
-}
 
