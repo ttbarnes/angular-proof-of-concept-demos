@@ -29,15 +29,12 @@ angular.module('routes', ['ui.router'])
     },
     formValidation: {
       name: 'formValidation'
-    },
-    error: {
-      name: 'error'
     }
   })
 
   .config(function($stateProvider, $urlRouterProvider, states) {
 
-    $urlRouterProvider.otherwise('/error');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state(states.home.name, {
@@ -104,13 +101,6 @@ angular.module('routes', ['ui.router'])
         controller: 'formValidationCtrl',
         data: {
           pageTitle: 'form validation'
-        }
-      })
-      .state(states.error.name, {
-        url: '/error',
-        templateUrl: 'views/error.html',
-        data: {
-          pageTitle: 'Whoops!'
         }
       })
 
