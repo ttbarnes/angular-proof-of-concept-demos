@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('proofOfConceptDemos').factory('supermanService', function() {
+angular.module('proofOfConceptDemos').factory('simpleService', function() {
   
   var characters = ['Clark Kent', 'Lois Lane', 'Lex Luthor'];
 
