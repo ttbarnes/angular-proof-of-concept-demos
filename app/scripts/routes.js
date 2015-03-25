@@ -29,6 +29,9 @@ angular.module('routes', ['ui.router'])
     },
     formValidation: {
       name: 'formValidation'
+    },
+    gifbase: {
+      name: 'gifbase'
     }
   })
 
@@ -101,6 +104,14 @@ angular.module('routes', ['ui.router'])
         controller: 'formValidationCtrl',
         data: {
           pageTitle: 'form validation'
+        }
+      })
+      .state(states.gifbase.name, {
+        url: '/gifbase',
+        templateUrl: 'views/gifbase.html',
+        controller: 'gifbaseCtrl',
+        data: {
+          pageTitle: 'http call to 3rd party api'
         }
       })
 
