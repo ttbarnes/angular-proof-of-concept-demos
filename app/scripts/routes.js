@@ -6,11 +6,21 @@ angular.module('routes', ['ui.router'])
     home: {
       name: 'home'
     },
+    forms: {
+      name: 'forms',
+      formValidation: {
+        name: 'forms.formValidation',
+        pageTitle: 'form validation'
+      },
+      disableSubmitRadioSelection: {
+        name: 'forms.disableSubmitRadioSelection'
+      },
+      activeCheckboxLabel: {
+        name: 'forms.activeCheckboxLabel'
+      }
+    },
     displayDataFromAService: {
       name: 'displayDataFromAService'
-    },
-    disableSubmitRadioSelection: {
-      name: 'disableSubmitRadioSelection'
     },
     toggleMenuWithNgFocusNgBlur: {
       name: 'toggleMenuWithNgFocusNgBlur'
@@ -27,9 +37,6 @@ angular.module('routes', ['ui.router'])
     activeHoverDirective: {
       name: 'activeHoverDirective'
     },
-    formValidation: {
-      name: 'formValidation'
-    },
     gifbase: {
       name: 'gifbase'
     }
@@ -44,6 +51,36 @@ angular.module('routes', ['ui.router'])
         url: '/',
         templateUrl: 'views/home.html'
       })
+      .state(states.forms.name, {
+        url: '/forms',
+        templateUrl: 'views/forms/index.html'
+      })
+      .state(states.forms.formValidation.name, {
+        url: '/form-validation',
+        templateUrl: 'views/forms/form-validation.html',
+        controller: 'formValidationCtrl',
+        data: {
+          pageTitle: 'form validation'
+        }
+      })
+      .state(states.forms.disableSubmitRadioSelection.name, {
+        url: '/radio-disable',
+        templateUrl: 'views/forms/disable-submit-radio-selection.html',
+        controller: 'disableSubmitRadioSelectionCtrl',
+        data: {
+          pageTitle: 'disable submit until certain radio button is selected'
+        }
+      })
+      .state(states.forms.activeCheckboxLabel.name, {
+        url: '/active-checkbox-label',
+        templateUrl: 'views/forms/active-checkbox-label.html',
+        controller: 'activeCheckboxLabelCtrl',
+        data: {
+          pageTitle: 'active checkbox label'
+        }
+      })
+
+
       .state(states.displayDataFromAService.name, {
         url: '/simple-service',
         templateUrl: 'views/simple-service.html',
@@ -52,27 +89,11 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'simple service'
         }
       })
-      .state(states.disableSubmitRadioSelection.name, {
-        url: '/radio-disable',
-        templateUrl: 'views/disable-submit-radio-selection.html',
-        controller: 'disableSubmitRadioSelectionCtrl',
-        data: {
-          pageTitle: 'disable submit until certain radio button is selected'
-        }
-      })
       .state(states.toggleMenuWithNgFocusNgBlur.name, {
         url: '/toggle-menu-with-ng-focus-and-ng-blur',
         templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html',
         data: {
           pageTitle: 'toggle menu with ng-focus and ng-blur'
-        }
-      })
-      .state(states.activeCheckboxLabel.name, {
-        url: '/active-checkbox-label',
-        templateUrl: 'views/active-checkbox-label.html',
-        controller: 'activeCheckboxLabelCtrl',
-        data: {
-          pageTitle: 'active checkbox label'
         }
       })
       .state(states.ngRepeatFilterToggle.name, {
@@ -96,14 +117,6 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/active-hover-directive.html',
         data: {
           pageTitle: 'active hover directive'
-        }
-      })
-      .state(states.formValidation.name, {
-        url: '/form-validation',
-        templateUrl: 'views/form-validation.html',
-        controller: 'formValidationCtrl',
-        data: {
-          pageTitle: 'form validation'
         }
       })
       .state(states.gifbase.name, {
