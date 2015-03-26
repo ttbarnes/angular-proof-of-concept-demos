@@ -27,6 +27,15 @@ angular.module('routes', ['ui.router'])
         name: 'ngRepeat.nestedNgRepeat'
       },
     },
+    services: {
+      name: 'services',
+      simpleService: {
+        name: 'services.simpleService'
+      },
+      gifbase: {
+        name: 'services.gifbase'
+      }
+    },
     displayDataFromAService: {
       name: 'displayDataFromAService'
     },
@@ -59,6 +68,7 @@ angular.module('routes', ['ui.router'])
         url: '/',
         templateUrl: 'views/home.html'
       })
+
       .state(states.forms.name, {
         url: '/forms',
         templateUrl: 'views/forms/index.html'
@@ -87,6 +97,7 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'active checkbox label'
         }
       })
+
       .state(states.ngRepeat.name, {
         url: '/ng-repeat',
         templateUrl: 'views/forms/index.html'
@@ -108,15 +119,27 @@ angular.module('routes', ['ui.router'])
         }
       })
 
-
-      .state(states.displayDataFromAService.name, {
+      .state(states.services.name, {
+        url: '/services',
+        templateUrl: 'views/services/index.html'
+      })
+      .state(states.services.simpleService.name, {
         url: '/simple-service',
-        templateUrl: 'views/simple-service.html',
+        templateUrl: 'views/services/simple-service.html',
         controller: 'simpleServiceCtrl',
         data: {
           pageTitle: 'simple service'
         }
       })
+      .state(states.services.gifbase.name, {
+        url: '/gifbase',
+        templateUrl: 'views/services/gifbase.html',
+        controller: 'gifbaseCtrl',
+        data: {
+          pageTitle: 'http call to 3rd party api'
+        }
+      })
+
       .state(states.toggleMenuWithNgFocusNgBlur.name, {
         url: '/toggle-menu-with-ng-focus-and-ng-blur',
         templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html',
@@ -131,13 +154,6 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'active hover directive'
         }
       })
-      .state(states.gifbase.name, {
-        url: '/gifbase',
-        templateUrl: 'views/gifbase.html',
-        controller: 'gifbaseCtrl',
-        data: {
-          pageTitle: 'http call to 3rd party api'
-        }
-      })
+      
 
 });
