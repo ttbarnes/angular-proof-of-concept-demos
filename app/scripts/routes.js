@@ -36,6 +36,12 @@ angular.module('routes', ['ui.router'])
         name: 'services.gifbase'
       }
     },
+    directives: {
+      name: 'directives',
+      activeHoverDirective: {
+        name: 'directives.activeHoverDirective'
+      }
+    },
     displayDataFromAService: {
       name: 'displayDataFromAService'
     },
@@ -140,18 +146,23 @@ angular.module('routes', ['ui.router'])
         }
       })
 
+      .state(states.directives.name, {
+        url: '/directives',
+        templateUrl: 'views/directives/index.html'
+      })
+      .state(states.directives.activeHoverDirective.name, {
+        url: '/active-hover-directive',
+        templateUrl: 'views/directives/active-hover.html',
+        data: {
+          pageTitle: 'active hover directive'
+        }
+      })
+
       .state(states.toggleMenuWithNgFocusNgBlur.name, {
         url: '/toggle-menu-with-ng-focus-and-ng-blur',
         templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html',
         data: {
           pageTitle: 'toggle menu with ng-focus and ng-blur'
-        }
-      })
-      .state(states.activeHoverDirective.name, {
-        url: '/active-hover-directive',
-        templateUrl: 'views/active-hover-directive.html',
-        data: {
-          pageTitle: 'active hover directive'
         }
       })
       
