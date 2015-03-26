@@ -1,5 +1,5 @@
 {
-  "name": "ajs-router-seperation",
+  "name": "angular-proof-of-concept-demos",
   "version": "0.0.0",
   "dependencies": {
     "angular": "^1.3.0",
