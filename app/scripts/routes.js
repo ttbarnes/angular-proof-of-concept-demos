@@ -9,8 +9,7 @@ angular.module('routes', ['ui.router'])
     forms: {
       name: 'forms',
       formValidation: {
-        name: 'forms.formValidation',
-        pageTitle: 'form validation'
+        name: 'forms.formValidation'
       },
       disableSubmitRadioSelection: {
         name: 'forms.disableSubmitRadioSelection'
@@ -18,6 +17,15 @@ angular.module('routes', ['ui.router'])
       activeCheckboxLabel: {
         name: 'forms.activeCheckboxLabel'
       }
+    },
+    ngRepeat: {
+      name: 'ngRepeat',
+      ngRepeatFilterToggle: {
+        name: 'ngRepeat.ngRepeatFilterToggle'
+      },
+      nestedNgRepeat: {
+        name: 'ngRepeat.nestedNgRepeat'
+      },
     },
     displayDataFromAService: {
       name: 'displayDataFromAService'
@@ -79,6 +87,26 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'active checkbox label'
         }
       })
+      .state(states.ngRepeat.name, {
+        url: '/ng-repeat',
+        templateUrl: 'views/forms/index.html'
+      })
+      .state(states.ngRepeat.ngRepeatFilterToggle.name, {
+        url: '/ng-repeat-filter-toggle',
+        templateUrl: 'views/ng-repeat/ng-repeat-filter-toggle.html',
+        controller: 'ngRepeatFilterToggleCtrl',
+        data: {
+          pageTitle: 'ng-repeat filter toggle'
+        }
+      })
+      .state(states.ngRepeat.nestedNgRepeat.name, {
+        url: '/nested-ng-repeat',
+        templateUrl: 'views/ng-repeat/nested-ng-repeat.html',
+        controller: 'nestedNgRepeatCtrl',
+        data: {
+          pageTitle: 'nested ng-repeat'
+        }
+      })
 
 
       .state(states.displayDataFromAService.name, {
@@ -96,14 +124,14 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'toggle menu with ng-focus and ng-blur'
         }
       })
-      .state(states.ngRepeatFilterToggle.name, {
+      /*.state(states.ngRepeatFilterToggle.name, {
         url: '/ng-repeat-filter-toggle',
         templateUrl: 'views/ng-repeat-filter-toggle.html',
         controller: 'ngRepeatFilterToggleCtrl',
         data: {
           pageTitle: 'ng-repeat filter toggle'
         }
-      })
+      })a
       .state(states.nestedNgRepeat.name, {
         url: '/nested-ng-repeat',
         templateUrl: 'views/nested-ng-repeat.html',
@@ -112,6 +140,7 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'nested ng-repeat'
         }
       })
+      */
       .state(states.activeHoverDirective.name, {
         url: '/active-hover-directive',
         templateUrl: 'views/active-hover-directive.html',
