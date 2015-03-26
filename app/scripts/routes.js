@@ -40,6 +40,9 @@ angular.module('routes', ['ui.router'])
       name: 'directives',
       activeHoverDirective: {
         name: 'directives.activeHoverDirective'
+      },
+      randomRobotImage: {
+        name: 'directives.randomRobotImage'
       }
     },
     ui: {
@@ -152,6 +155,13 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/directives/active-hover.html',
         data: {
           pageTitle: 'active hover directive'
+        }
+      })
+      .state(states.directives.randomRobotImage.name, {
+        url: '/random-robot-image',
+        templateUrl: 'views/directives/random-robot-image.html',
+        data: {
+          pageTitle: 'random robot image'
         }
       })
 
