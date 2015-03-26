@@ -124,23 +124,6 @@ angular.module('routes', ['ui.router'])
           pageTitle: 'toggle menu with ng-focus and ng-blur'
         }
       })
-      /*.state(states.ngRepeatFilterToggle.name, {
-        url: '/ng-repeat-filter-toggle',
-        templateUrl: 'views/ng-repeat-filter-toggle.html',
-        controller: 'ngRepeatFilterToggleCtrl',
-        data: {
-          pageTitle: 'ng-repeat filter toggle'
-        }
-      })a
-      .state(states.nestedNgRepeat.name, {
-        url: '/nested-ng-repeat',
-        templateUrl: 'views/nested-ng-repeat.html',
-        controller: 'nestedNgRepeatCtrl',
-        data: {
-          pageTitle: 'nested ng-repeat'
-        }
-      })
-      */
       .state(states.activeHoverDirective.name, {
         url: '/active-hover-directive',
         templateUrl: 'views/active-hover-directive.html',
