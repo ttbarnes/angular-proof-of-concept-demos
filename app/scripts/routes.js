@@ -47,27 +47,6 @@ angular.module('routes', ['ui.router'])
       toggleMenuWithNgFocusNgBlur: {
         name: 'ui.toggleMenuWithNgFocusNgBlur'
       }
-    },
-    displayDataFromAService: {
-      name: 'displayDataFromAService'
-    },
-    toggleMenuWithNgFocusNgBlur: {
-      name: 'toggleMenuWithNgFocusNgBlur'
-    },
-    activeCheckboxLabel: {
-      name: 'activeCheckboxLabel'
-    },
-    ngRepeatFilterToggle: {
-      name: 'ngRepeatFilterToggle'
-    },
-    nestedNgRepeat: {
-      name: 'nestedNgRepeat'
-    },
-    activeHoverDirective: {
-      name: 'activeHoverDirective'
-    },
-    gifbase: {
-      name: 'gifbase'
     }
   })
 
@@ -81,6 +60,9 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/home.html'
       })
 
+      ////////////////////
+      //forms
+      ////////////////////
       .state(states.forms.name, {
         url: '/forms',
         templateUrl: 'views/forms/index.html'
@@ -110,6 +92,9 @@ angular.module('routes', ['ui.router'])
         }
       })
 
+      ////////////////////
+      //ngRepeat
+      ////////////////////
       .state(states.ngRepeat.name, {
         url: '/ng-repeat',
         templateUrl: 'views/forms/index.html'
@@ -131,6 +116,9 @@ angular.module('routes', ['ui.router'])
         }
       })
 
+      ////////////////////
+      //services
+      ////////////////////
       .state(states.services.name, {
         url: '/services',
         templateUrl: 'views/services/index.html'
@@ -152,6 +140,9 @@ angular.module('routes', ['ui.router'])
         }
       })
 
+      ////////////////////
+      //directives
+      ////////////////////
       .state(states.directives.name, {
         url: '/directives',
         templateUrl: 'views/directives/index.html'
@@ -164,6 +155,9 @@ angular.module('routes', ['ui.router'])
         }
       })
 
+      ////////////////////
+      //ui
+      ////////////////////
       .state(states.ui.name, {
         url: '/ui',
         templateUrl: 'views/ui/index.html'
