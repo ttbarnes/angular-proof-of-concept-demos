@@ -42,6 +42,12 @@ angular.module('routes', ['ui.router'])
         name: 'directives.activeHoverDirective'
       }
     },
+    ui: {
+      name: 'ui',
+      toggleMenuWithNgFocusNgBlur: {
+        name: 'ui.toggleMenuWithNgFocusNgBlur'
+      }
+    },
     displayDataFromAService: {
       name: 'displayDataFromAService'
     },
@@ -158,13 +164,16 @@ angular.module('routes', ['ui.router'])
         }
       })
 
-      .state(states.toggleMenuWithNgFocusNgBlur.name, {
+      .state(states.ui.name, {
+        url: '/ui',
+        templateUrl: 'views/ui/index.html'
+      })
+      .state(states.ui.toggleMenuWithNgFocusNgBlur.name, {
         url: '/toggle-menu-with-ng-focus-and-ng-blur',
-        templateUrl: 'views/toggle-menu-with-ng-focus-and-ng-blur.html',
+        templateUrl: 'views/ui/toggle-menu-with-ng-focus-and-ng-blur.html',
         data: {
           pageTitle: 'toggle menu with ng-focus and ng-blur'
         }
       })
-      
 
 });
