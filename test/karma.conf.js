@@ -32,7 +32,7 @@ module.exports = function(config) {
       // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/unit/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude
