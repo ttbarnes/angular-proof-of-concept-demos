@@ -398,15 +398,42 @@ module.exports = function (grunt) {
       ]
     },
 
-    // Test settings
+    // karma settings
     karma: {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
-  });
+    },
 
+    //protractor settings
+    //http://stackoverflow.com/questions/19066747/integrating-protractor-for-e2e-testing-with-yeoman-in-grunt-file-for-angular-j
+    protractor_webdriver: {
+      start: {
+        options: {
+          path: 'node_modules/protractor/bin/',
+          command: 'webdriver-manager start'
+        }
+      }
+    },
+
+    protractor: {
+      options: {
+        keepAlive: true,
+        configFile: "test/protractor.conf.js",
+        noColor: true, // If true, protractor will not use colors in its output.
+
+        args: {
+          seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
+          chromeDriver: 'node_modules/protractor/selenium/chromedriver.exe'
+        }
+      },
+      run: {
+
+      }
+    }
+
+  });
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -428,13 +455,18 @@ module.exports = function (grunt) {
     grunt.task.run(['serve:' + target]);
   });
 
+  grunt.loadNpmTasks('grunt-protractor-webdriver');
+  grunt.loadNpmTasks("grunt-protractor-runner")
+
   grunt.registerTask('test', [
     'clean:server',
     'wiredep:test',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma'
+    'karma',
+    'protractor_webdriver',
+    'protractor:run'
   ]);
 
   grunt.registerTask('build', [

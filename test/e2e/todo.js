@@ -23,6 +23,6 @@ describe('Protractor Demo App', function() {
 
   it('should add four and six', function() {
     // Fill this in.
-    expect(latestResult.getText()).toEqual('0');
+    expect(latestResult.getText()).toEqual('100');
   });
 });
