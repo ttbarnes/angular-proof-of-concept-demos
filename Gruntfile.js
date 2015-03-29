@@ -412,7 +412,8 @@ module.exports = function (grunt) {
       start: {
         options: {
           path: 'node_modules/protractor/bin/',
-          command: 'webdriver-manager start'
+          command: 'webdriver-manager start --standalone',
+          keepAlive : true
         }
       }
     },
