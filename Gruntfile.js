@@ -407,7 +407,9 @@ module.exports = function (grunt) {
     },
 
     //protractor settings
-    protractor_webdriver: {
+    //jshint ignore:line required due to grunt task name
+    //jshint wants this to be camelCase
+    protractor_webdriver: { // jshint ignore:line
       start: {
         options: {
           path: 'node_modules/protractor/bin/',
