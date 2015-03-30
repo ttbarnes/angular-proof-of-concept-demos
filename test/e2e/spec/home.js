@@ -36,6 +36,102 @@ describe('page: home', function() {
       expect(elements.count()).toEqual(15);
     });
 
+    describe('forms', function(){
+
+      var navLinks = element.all(by.css('.nav-forms a'));
+
+      it('should have the correct number of form items', function(){
+        expect(navLinks.count()).toBe(3);
+      });
+
+      it('should direct to the correct form views', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/form-validation');
+
+        browser.get('http://localhost:9000/#/');
+        navLinks.get(1).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/radio-disable');
+
+        browser.get('http://localhost:9000/#/');
+        navLinks.get(2).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/active-checkbox-label');
+      });
+
+    });
+
+    describe('ng-repeat', function(){
+
+      var navLinks = element.all(by.css('.nav-ng-repeat a'));
+
+      it('should have the correct number of ng-repeat items', function(){
+        expect(navLinks.count()).toBe(2);
+      });
+
+      it('should direct to the correct ng-repeat views', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');
+
+        browser.get('http://localhost:9000/#/');
+        navLinks.get(1).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/nested-ng-repeat');
+      });
+
+    });
+
+    describe('services', function(){
+
+      var navLinks = element.all(by.css('.nav-services a'));
+
+      it('should have the correct number of services items', function(){
+        expect(navLinks.count()).toBe(2);
+      });
+
+      it('should direct to the correct services views', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/simple-service');
+
+        browser.get('http://localhost:9000/#/');
+        navLinks.get(1).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/gifbase');
+      });
+
+    });
+
+    describe('directives', function(){
+
+      var navLinks = element.all(by.css('.nav-directives a'));
+
+      it('should have the correct number of directives items', function(){
+        expect(navLinks.count()).toBe(2);
+      });
+
+      it('should direct to the correct directives views', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/active-hover-directive');
+
+        browser.get('http://localhost:9000/#/');
+        navLinks.get(1).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/random-robot-image');
+      });
+
+    });
+
+    describe('ui', function(){
+
+      var navLinks = element.all(by.css('.nav-ui a'));
+
+      it('should have the correct number of ui items', function(){
+        expect(navLinks.count()).toBe(1);
+      });
+
+      it('should direct to the correct ui views', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ui/toggle-menu-with-ng-focus-and-ng-blur');
+      });
+
+    });
+
+
   });
 
   describe('footer', function(){
