@@ -69,6 +69,7 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct ng-repeat views', function(){
+        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');
 
