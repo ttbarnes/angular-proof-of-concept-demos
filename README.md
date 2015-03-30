@@ -17,7 +17,7 @@ POC demos with pure angular
 
 3) Run the app: `grunt serve`
 
-4) Run the unit tests: `grunt test`
+4) Run the tests: `grunt test` (currently `grunt serve` needs to be running at the same time)
 
 
 ## Contributions

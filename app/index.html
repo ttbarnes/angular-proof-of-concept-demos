@@ -5,8 +5,7 @@
     <title>Angular proof of concept demos</title>
     <meta name="description" content="POC demos with pure angular">
     <meta name="author" content="Tony Barnes">
-    <meta name="viewport" content="width=device-width">
-    <!-- build:css(.) styles/vendor.css -->
+    <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -15,15 +14,17 @@
     <!-- endbuild -->
   </head>
   <body ng-app="proofOfConceptDemos">
+
     <div class="wrapper">
 
-        <header ng-include="'views/partials/header.html'"></header>
+      <header ng-include="'views/partials/header.html'"></header>
 
-        <div class="main-content">
-            <div ui-view></div>
-        </div>
+      <section class="main-content">
+        <div ui-view></div>
+      </section>
 
-        <footer ng-include="'views/partials/footer.html'"></footer>
+      <footer ng-include="'views/partials/footer.html'"></footer>
+
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -53,5 +54,5 @@
     <script src="scripts/services/simple-service.js"></script>
     <script src="scripts/services/gifbase-service.js"></script>
       <!-- endbuild -->
-</body>
+  </body>
 </html>
