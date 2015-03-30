@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('proofOfConceptDemos')
-  .controller('formValidationCtrl', function ($scope) {
+  .controller('formValidationCtrl', function () {
 
 
   });

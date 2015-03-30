@@ -178,6 +178,6 @@ angular.module('routes', ['ui.router'])
         data: {
           pageTitle: 'toggle menu with ng-focus and ng-blur'
         }
-      })
+      });
 
 });

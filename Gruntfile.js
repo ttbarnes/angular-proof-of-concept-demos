@@ -407,7 +407,6 @@ module.exports = function (grunt) {
     },
 
     //protractor settings
-    //http://stackoverflow.com/questions/19066747/integrating-protractor-for-e2e-testing-with-yeoman-in-grunt-file-for-angular-j
     protractor_webdriver: {
       start: {
         options: {
@@ -421,7 +420,7 @@ module.exports = function (grunt) {
     protractor: {
       options: {
         keepAlive: true,
-        configFile: "test/protractor.conf.js",
+        configFile: 'test/protractor.conf.js',
         noColor: true, // If true, protractor will not use colors in its output.
 
         args: {
@@ -457,7 +456,7 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-protractor-webdriver');
-  grunt.loadNpmTasks("grunt-protractor-runner")
+  grunt.loadNpmTasks('grunt-protractor-runner');
 
   grunt.registerTask('test', [
     'clean:server',
