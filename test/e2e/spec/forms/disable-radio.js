@@ -1,7 +1,7 @@
-ddescribe('page: forms - radio-disable', function() {
+describe('page: forms - disable-radio', function() {
 
   beforeEach(function() {
-    browser.get('http://localhost:9000/#/forms/radio-disable');
+    browser.get('http://localhost:9000/#/forms/disable-radio');
   });
 
   it('should have a header title defined', function(){ 

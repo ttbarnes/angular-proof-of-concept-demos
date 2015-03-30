@@ -79,7 +79,7 @@ angular.module('routes', ['ui.router'])
         }
       })
       .state(states.forms.disableSubmitRadioSelection.name, {
-        url: '/radio-disable',
+        url: '/disable-radio',
         templateUrl: 'views/forms/disable-submit-radio-selection.html',
         controller: 'disableSubmitRadioSelectionCtrl',
         data: {

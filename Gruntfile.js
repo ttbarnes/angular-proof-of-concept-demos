@@ -407,8 +407,8 @@ module.exports = function (grunt) {
     },
 
     //protractor settings
-    //jshint ignore:line required due to grunt task name
-    //jshint wants this to be camelCase
+    //jhint ignore:line required due to grunt task name
+    //jhint wants this to be camelCase
     protractor_webdriver: { // jshint ignore:line
       start: {
         options: {

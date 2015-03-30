@@ -50,7 +50,7 @@ describe('page: home', function() {
 
         browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
-        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/radio-disable');
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/disable-radio');
 
         browser.get('http://localhost:9000/#/');
         navLinks.get(2).click();
