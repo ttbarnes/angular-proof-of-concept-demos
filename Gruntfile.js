@@ -423,7 +423,7 @@ module.exports = function (grunt) {
       options: {
         keepAlive: true,
         configFile: 'test/protractor.conf.js',
-        noColor: true, // If true, protractor will not use colors in its output.
+        noColor: false,
 
         args: {
           seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
