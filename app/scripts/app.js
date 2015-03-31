@@ -7,8 +7,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'routes',
-    'checklist-model'
+    'routes'
   ])
   .config(function() {
     
