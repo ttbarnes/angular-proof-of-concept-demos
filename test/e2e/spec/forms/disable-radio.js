@@ -87,10 +87,67 @@ describe('page: forms - disable-radio', function() {
 
   describe('interaction', function(){
 
+    describe('1st radio selection/click', function(){
+
+      it('should have a disabled submit button', function(){
+        formRadios.get(0).click();
+        expect(formSubmit.getAttribute('disabled')).toEqual('true');
+      });
+
+      it('should have the correct index in selection counter', function(){
+        formRadios.get(0).click();
+        expect(selectionCounter.getText()).toEqual('selected: 0');
+      });
+
+    });
+
+    describe('2nd radio selection/click', function(){
+
+      it('should have an enabled submit button', function(){
+        formRadios.get(1).click();
+        expect(formSubmit.getAttribute('disabled')).toBeNull();
+      });
+
+      it('should have the correct index in selection counter', function(){
+        formRadios.get(1).click();
+        expect(selectionCounter.getText()).toEqual('selected: 1');
+      });
+
+      it('should display a success message', function(){
+        formRadios.get(1).click();
+        expect(selectionSuccess.getText()).toEqual('Paul is selected!');
+      });
+
+    });
+
+    describe('3rd radio selection/click', function(){
+
+      it('should have a disabled submit button', function(){
+        formRadios.get(2).click();
+        expect(formSubmit.getAttribute('disabled')).toEqual('true');
+      });
+
+      it('should have the correct index in selection counter', function(){
+        formRadios.get(2).click();
+        expect(selectionCounter.getText()).toEqual('selected: 2');
+      });
+
+    });
+
+    describe('4th radio selection/click', function(){
+
+      it('should have a disabled submit button', function(){
+        formRadios.get(3).click();
+        expect(formSubmit.getAttribute('disabled')).toEqual('true');
+      });
+
+      it('should have the correct index in selection counter', function(){
+        formRadios.get(3).click();
+        expect(selectionCounter.getText()).toEqual('selected: 3');
+      });
+
+    });
+
   });
 
 });
-
-
-
-

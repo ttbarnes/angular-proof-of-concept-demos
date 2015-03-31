@@ -6,8 +6,8 @@
   </label>
 </form>
 
-<p class="selection-counter" ng-show="selected.radio >= 0">selected:  {{selected.radio}}</p>
+<p class="selection-counter" ng-show="selected.radio >= 0">selected: {{selected.radio}}</p>
 
-<h4 class="selection-success" ng-show="selected.radio === 1">it's selected!</h4>
+<h4 class="selection-success" ng-show="selected.radio === 1">{{people[1].name}} is selected!</h4>
 
 <button class="btn" ng-disabled="selected.radio != 1">Submit</button>
