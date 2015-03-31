@@ -10,28 +10,9 @@
 @import 'elements/_form';
 
 @import 'view-specific/_home';
+@import 'view-specific/forms/_active-checkbox-label';
 
 
-
-.labelCheckboxToggle {
-  label {
-    display:inline-block;
-  }
-
-  .active {
-    border:Solid 3px orange;
-  }
-
-}
-
-.active {
-  border:Solid 3px orange !important;
-}
-
-
-.checked { 
-  background: LightBlue;
-}
 
 /*
 .with-checklist-model-module {

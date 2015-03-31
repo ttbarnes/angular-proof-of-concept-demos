@@ -1,0 +1,28 @@
+.active-checkbox-label-wrap {
+  float:left;
+  width:100%;
+  max-width:250px;
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  .checked { 
+    background:LightBlue;
+  }
+  li {
+    margin-bottom:20px;
+    > div {
+      padding:10px;
+    }
+  }
+  label {
+    display:block;
+    cursor:pointer;
+    font-weight:bold;
+  }
+  input {
+    margin:0 5px 0 0;
+  }
+  p {
+    margin-bottom:0;
+  }
+}

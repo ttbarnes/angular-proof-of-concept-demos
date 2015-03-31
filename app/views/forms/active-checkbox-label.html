@@ -1,14 +1,12 @@
-<div class="labelCheckboxToggle">
-
-  <ul>
-    <li ng-repeat="item in items">
-        <div class="span4 module_card" ng-class="{ checked : isChecked }">
-          <label class="title" for="{{item.title}}">
-         <input id="{{item.title}}" type="checkbox" class="custom_checkbox" ng-model="isChecked">
-         {{item.title}}</label>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-  </ul>
-
-</div>
+<ul class="active-checkbox-label-wrap">
+  <li ng-repeat="item in items">
+    <div ng-class="{ checked : isChecked }">
+    <label for="{{item.title}}">
+      <input id="{{item.title}}"
+             type="checkbox"
+             ng-model="isChecked">{{item.title}}
+    </label>
+    <p><small>{{item.description}}</small></p>
+    </div>
+  </li>
+</ul>

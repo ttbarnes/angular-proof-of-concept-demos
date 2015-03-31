@@ -23,7 +23,6 @@ describe('page: forms - disable-radio', function() {
     });
   };
 
-
   describe('initialisation', function(){
 
     it('should have a form', function(){ 
