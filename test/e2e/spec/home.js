@@ -68,12 +68,12 @@ describe('page: home', function() {
         expect(navLinks.count()).toBe(2);
       });
 
-      it('should direct to the correct ng-repeat views', function(){
-        browser.get('http://localhost:9000/#/');
+      it('should direct to the correct ng-repeat views - item 1', function(){
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');
+      });
 
-        browser.get('http://localhost:9000/#/');
+      it('should direct to the correct ng-repeat views - item 2', function(){
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/nested-ng-repeat');
       });
@@ -109,11 +109,12 @@ describe('page: home', function() {
         expect(navLinks.count()).toBe(2);
       });
 
-      it('should direct to the correct directives views', function(){
+      it('should direct to the correct directives views - item 1', function(){
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/active-hover-directive');
+      });
 
-        browser.get('http://localhost:9000/#/');
+      it('should direct to the correct directives views - item 2', function(){
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/random-robot-image');
       });
