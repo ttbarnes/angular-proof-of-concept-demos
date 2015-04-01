@@ -1,15 +1,15 @@
 <ul class="task-filter-toggle">
   <small>Filter by string (task.status):</small>
-  <li ng-click="statusFilter = 'todo'">todo</li>
-  <li ng-click="statusFilter = 'in-progress'">in-progress</li>
-  <li ng-click="statusFilter = 'complete'">complete</li>
+  <li ng-click="statusFilter = 'todo'" ng-class="{active: statusFilter == 'todo'}">todo</li>
+  <li ng-click="statusFilter = 'in-progress'" ng-class="{active: statusFilter == 'in-progress'}">in-progress</li>
+  <li ng-click="statusFilter = 'complete'" ng-class="{active: statusFilter == 'complete'}">complete</li>
 </ul>
 
 <ul class="task-filter-toggle">
   <small>Filter by numeric (task.specialId):</small>
-  <li ng-click="statusFilter = 1">1 (todo)</li>
-  <li ng-click="statusFilter = 2">2 (in-progress)</li>
-  <li ng-click="statusFilter = 3">3 (complete)</li>
+  <li ng-click="statusFilter = 1" ng-class="{active: statusFilter == 1}">1 (todo)</li>
+  <li ng-click="statusFilter = 2" ng-class="{active: statusFilter == 2}">2 (in-progress)</li>
+  <li ng-click="statusFilter = 3" ng-class="{active: statusFilter == 3}">3 (complete)</li>
 </ul>
 
 <div class="task-item" ng-repeat="task in tasks | filter:statusFilter">

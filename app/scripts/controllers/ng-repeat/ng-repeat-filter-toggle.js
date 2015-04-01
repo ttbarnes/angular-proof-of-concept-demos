@@ -31,4 +31,7 @@ angular.module('proofOfConceptDemos')
       }
     ];
 
+    $scope.statusFilter = 'todo';
+
+
   });

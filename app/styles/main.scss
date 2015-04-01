@@ -39,6 +39,10 @@
     vertical-align:top;
     padding:0 10px;
     cursor:pointer;
+    &.active {
+      background:#333;
+      color:#EEE;
+    }
   }
 }
 
