@@ -45,7 +45,7 @@ ddescribe('page: services - gifbase service', function() {
 
   ////////////////////////////////////////////////////////
   ////////
-  //not that because this gifbase service could change,
+  //note that because this gifbase service could change,
   //we don't test copy/image specifics.
   //we only test that the elements are there.
   ////////
