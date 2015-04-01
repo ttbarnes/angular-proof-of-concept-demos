@@ -1,4 +1,4 @@
-ddescribe('page: services - gifbase service', function() {
+describe('page: services - gifbase service', function() {
 
   beforeEach(function() {
     browser.get('http://localhost:9000/#/services/gifbase');
