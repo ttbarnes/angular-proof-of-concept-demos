@@ -1,4 +1,4 @@
-ddescribe('page: ng-repeat - ng-repeat filter toggle', function() {
+describe('page: ng-repeat - ng-repeat filter toggle', function() {
 
   beforeEach(function() {
     browser.get('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');

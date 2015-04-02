@@ -44,11 +44,11 @@ describe('page: services - gifbase service', function() {
   });
 
   ////////////////////////////////////////////////////////
-  ////////
+  //
   //note that because this gifbase service could change,
   //we don't test copy/image specifics.
   //we only test that the elements are there.
-  ////////
+  //
   ////////////////////////////////////////////////////////
 
 });
