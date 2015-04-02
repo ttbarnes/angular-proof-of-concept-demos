@@ -77,6 +77,59 @@ ddescribe('page: ng-repeat - ng-repeat filter toggle', function() {
 
   });
 
-  
+  describe('interaction: filter by string - in progess', function(){
+
+    beforeEach(function() {
+      filterToggleStringItems.get(1).click();
+    });
+
+    it('should display new filtered items', function(){
+      expect(tasks).toBeDefined();
+      expect(tasks.count()).toEqual(2);
+    });
+
+    it('should have the correct copy in 1st task', function(){
+      element.all(by.repeater('task in tasks')).then(function(tasks) {
+        var heading = tasks[0].element(by.css('h4'));
+        var status = tasks[0].element(by.css('p'));
+        expect(heading.getText()).toEqual('get some tea bags');
+        expect(status.getText()).toEqual('in-progress');
+      });
+    });
+
+    it('should have the correct copy in new filter items - 2nd item', function(){
+      element.all(by.repeater('task in tasks')).then(function(tasks) {
+        var heading = tasks[1].element(by.css('h4'));
+        var status = tasks[1].element(by.css('p'));
+        expect(heading.getText()).toEqual('write some code');
+        expect(status.getText()).toEqual('in-progress');
+      });
+    });
+
+  });
+
+  describe('interaction: filter by string - complete', function(){
+
+    beforeEach(function() {
+      filterToggleStringItems.get(2).click();
+    });
+
+    it('should display new filtered items', function(){
+      expect(tasks).toBeDefined();
+      expect(tasks.count()).toEqual(1);
+    });
+
+    it('should have the correct copy in 1st task', function(){
+      element.all(by.repeater('task in tasks')).then(function(tasks) {
+        var heading = tasks[0].element(by.css('h4'));
+        var status = tasks[0].element(by.css('p'));
+        expect(heading.getText()).toEqual('make some tea');
+        expect(status.getText()).toEqual('complete');
+      });
+    });
+
+  });
+
+
 
 });
