@@ -6,6 +6,11 @@ exports.config = {
   onPrepare: function() {
       var SpecReporter = require('jasmine-spec-reporter');
       jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: true}));
+
+      var width = 800;
+      var height = 600;
+      browser.driver.manage().window().setSize(width, height);
+
    }
 
 }

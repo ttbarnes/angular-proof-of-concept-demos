@@ -1,4 +1,4 @@
-ddescribe('page: ng-repeat - nested ng-repeat', function() {
+describe('page: ng-repeat - nested ng-repeat', function() {
 
   beforeEach(function() {
     browser.get('http://localhost:9000/#/ng-repeat/nested-ng-repeat');
