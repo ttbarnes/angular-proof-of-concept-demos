@@ -55,8 +55,28 @@ ddescribe('page: ng-repeat - ng-repeat filter toggle', function() {
         expect(tasks.count()).toEqual(2);
       });
 
+      it('should have the correct copy in the 1st item', function(){
+        element.all(by.repeater('task in tasks')).then(function(tasks) {
+          var heading = tasks[0].element(by.css('h4'));
+          var status = tasks[0].element(by.css('p'));
+          expect(heading.getText()).toEqual('do some washing');
+          expect(status.getText()).toEqual('todo');
+        });
+      });
+
+      it('should have the correct copy in the 2nd item', function(){
+        element.all(by.repeater('task in tasks')).then(function(tasks) {
+          var heading = tasks[1].element(by.css('h4'));
+          var status = tasks[1].element(by.css('p'));
+          expect(heading.getText()).toEqual('call phone company');
+          expect(status.getText()).toEqual('todo');
+        });
+      });
+
     });
 
   });
+
+  
 
 });
