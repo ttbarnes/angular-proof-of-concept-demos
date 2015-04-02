@@ -1,8 +1,18 @@
 header {
-  border-bottom:solid 3px #EEE;
+  background:#A6120D;
   margin-bottom:30px;
 
-  h2 {
-    margin-top:10px;
+  h1 {
+    font-weight:300;
+    a {
+      color:#F2F2F2;
+    }
   }
+
+  h2 {
+    font-weight:300;
+    margin-top:10px;
+    color:#D2D2D2;
+  }
+
 }

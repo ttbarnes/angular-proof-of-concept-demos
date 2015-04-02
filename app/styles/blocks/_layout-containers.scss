@@ -11,17 +11,13 @@ body {
   color:#111;
 }
 
-.wrapper {
-  padding:0 10px;
-}
-
 header,
 footer {
-  padding:10px 0;
+  padding:10px;
 }
 
 .main-content {
   min-height:calc(85% - 80px);
-  padding-bottom:40px;
+  padding:0 10px 40px 10px;
 }
 
