@@ -93,6 +93,56 @@ ddescribe('page: forms - form-validation', function() {
       expect(error.getText()).toEqual('This field is required.');
     });
 
+  });
+
+  describe('user email', function(){
+
+    var label = element(by.css('.row.user-email label'));
+    var input = element(by.css('.row.user-email input'));
+    var error = element(by.css('.row.user-email span.error'));
+
+    it('should have the correct html/angular label attribute', function(){
+      expect(label.getAttribute('for')).toEqual('userEmail');
+    });
+
+    it('should have the correct html/angular input attributes', function(){
+      expect(input.getAttribute('name')).toEqual('userEmail');
+      expect(input.getAttribute('ng-model')).toEqual('userEmail');
+      expect(input.getAttribute('required')).toBeDefined();
+    });
+
+    it('should have the correct ng-show values in the error message', function(){
+      expect(error.getAttribute('ng-show')).toEqual('!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid');
+    });
+
+    it('should have error message hidden by default', function(){
+      expect(error.isDisplayed()).toBeFalsy();
+    });
+
+    it('should display error message until a correct email is entered', function(){
+      input.sendKeys('myemail@');
+      expect(error.isDisplayed()).toBeTruthy();
+      input.sendKeys('mydomain');
+      expect(error.isDisplayed()).toBeFalsy();
+      input.sendKeys('.');
+      expect(error.isDisplayed()).toBeTruthy();
+      input.sendKeys('com');
+      expect(error.isDisplayed()).toBeFalsy();
+    });
+
+    it('should display error message if you add email and then remove', function(){
+      input.clear();
+      input.sendKeys('myemail@mydomain.co.uk');
+      expect(error.isDisplayed()).toBeFalsy();
+      input.clear();
+      expect(error.isDisplayed()).toBeTruthy();
+    });
+
+    it('should display the correct error message copy', function(){
+      input.sendKeys('myemail@mydomain.co.uk');
+      input.clear();
+      expect(error.getText()).toEqual('Email address is invalid.');
+    });
 
   });
 
