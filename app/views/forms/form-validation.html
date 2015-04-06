@@ -1,86 +1,87 @@
-<form name="signupForm">
+<div class="signup-form">
+  <form name="signupForm">
 
-  <div class="row">
-    <label for="userName">name</label>
-    <input name="userName" 
-           type="text"
-           ng-model="userName" 
-           required>
-    <span class="error" 
-          ng-show="!signupForm.userName.$pristine && signupForm.userName.$invalid">This field is required.  </span><br/>
-  </div>
+    <div class="row">
+      <label for="userName">name</label>
+      <input name="userName" 
+             type="text"
+             ng-model="userName" 
+             required>
+      <span class="error" 
+            ng-show="!signupForm.userName.$pristine && signupForm.userName.$invalid">This field is required.</span><br/>
+    </div>
 
-  <div class="row">
-    <label for="userEmail">email address</label>
-    <input name="userEmail" 
-           type="email"
-           ng-model="userEmail" 
-           required>
-    <span class="error" 
-          ng-show="!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid">Email address is invalid.</span><br/>
-  </div>
+    <div class="row">
+      <label for="userEmail">email address</label>
+      <input name="userEmail" 
+             type="email"
+             ng-model="userEmail" 
+             required>
+      <span class="error" 
+            ng-show="!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid">Email address is invalid.</span><br/>
+    </div>
 
-  <div class="row">
-    <label for="userNumber">magic number</label>
-    <input name="userNumber" 
-           type="number"
-           ng-model="userNumber" 
-           required>
-    <span class="error" 
-          ng-show="signupForm.userNumber.$dirty && signupForm.userNumber.$invalid">That's not a valid number.</span><br/>
-  </div>
+    <div class="row">
+      <label for="userNumber">magic number</label>
+      <input name="userNumber" 
+             type="number"
+             ng-model="userNumber" 
+             required>
+      <span class="error" 
+            ng-show="signupForm.userNumber.$dirty && signupForm.userNumber.$invalid">That's not a valid number.</span><br/>
+    </div>
 
-  <div class="row">
-    <label for="languageUsed">which language do you use the most?</label>
-    <input name="languageUsed" 
-           type="radio"
-           ng-model="language.used" 
-           value="angular"
-           required/>AngularJS
+    <div class="row">
+      <label for="languageUsed">which language do you use the most?</label>
+      <input name="languageUsed" 
+             type="radio"
+             ng-model="language.used" 
+             value="angular"
+             required/>AngularJS
+      <br/>
+      <input name="languageUsed" 
+             type="radio"
+             ng-model="language.used" 
+             value="html2"
+             required/>HTML 2.0
+      <br/>
+      <input name="languageUsed" 
+             type="radio"
+             ng-model="language.used" 
+             value="css11"
+             required/>CSS 11
+      <br/>
+      <span class="error" 
+            ng-show="signupForm.languageUsed.$invalid">Please select a language.</span><br/>
+    </div>
+
+
+    <div class="row">
+      <label for="favouriteUrl">favourite url</label>
+      <input name="favouriteUrl" 
+             type="url"
+             ng-model="favouriteUrl" 
+             required>
+      <span class="error" 
+            ng-show="!signupForm.favouriteUrl.$pristine && signupForm.favouriteUrl.$invalid">This url needs to contain a 'http'.</span><br/>
+    </div>
+
+    <div class="row">
+      <label for="spam">Send me spam</label>
+      <input name="spam" 
+             type="checkbox"
+             ng-model="spam" 
+             required>
+      <span class="error" 
+            ng-show="signupForm.spam.$invalid">Please accept spam to continue.</span><br/>
+    </div>
+
     <br/>
-    <input name="languageUsed" 
-           type="radio"
-           ng-model="language.used" 
-           value="html2"
-           required/>HTML 2.0
     <br/>
-    <input name="languageUsed" 
-           type="radio"
-           ng-model="language.used" 
-           value="html9"
-           required/>CSS 11
     <br/>
-    <span class="error" 
-          ng-show="signupForm.languageUsed.$invalid">Please select a language.</span><br/>
-  </div>
 
+    <p class="validation-text errors" ng-show="!!signupForm.$error.required">Errors are present.</p>
+    <p class="validation-text valid" ng-hide="signupForm.$error.required"><strong>Congratulations! All fields have been entered correctly.</strong></p>
 
-  <div class="row">
-    <label for="favouriteUrl">favourite url</label>
-    <input name="favouriteUrl" 
-           type="url"
-           ng-model="favouriteUrl" 
-           required>
-    <span class="error" 
-          ng-show="!signupForm.favouriteUrl.$pristine && signupForm.favouriteUrl.$invalid">This url needs to contain a 'http'.</span><br/>
-  </div>
-
-  <div class="row">
-    <label for="spam">Send me spam</label>
-    <input name="spam" 
-           type="checkbox"
-           ng-model="spam" 
-           required>
-    <span class="error" 
-          ng-show="signupForm.spam.$invalid">Please accept spam to continue.</span><br/>
-  </div>
-
-
-  <br/>
-  <br/>
-  <br/>
-
-  <p ng-show="!!signupForm.$error.required">Errors are present.</p>
-  <p ng-hide="signupForm.$error.required"><strong>Congratulations! All fields have been entered correctly.</strong></p>
-
-</form>
+  </form>
+</div>
