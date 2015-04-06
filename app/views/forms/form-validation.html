@@ -7,7 +7,7 @@
            ng-model="userName" 
            required>
     <span class="error" 
-          ng-show="signupForm.userName.$invalid">Required!</span><br/>
+          ng-show="!signupForm.userName.$pristine && signupForm.userName.$invalid">This field is required.  </span><br/>
   </div>
 
   <div class="row">
@@ -17,7 +17,7 @@
            ng-model="userEmail" 
            required>
     <span class="error" 
-          ng-show="signupForm.userEmail.$invalid">Email address required.</span><br/>
+          ng-show="!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid">Email address is invalid.</span><br/>
   </div>
 
   <div class="row">
@@ -27,7 +27,7 @@
            ng-model="userNumber" 
            required>
     <span class="error" 
-          ng-show="signupForm.userNumber.$invalid">This field should only contain numbers.</span><br/>
+          ng-show="signupForm.userNumber.$dirty && signupForm.userNumber.$invalid">That's not a valid number.</span><br/>
   </div>
 
   <div class="row">
@@ -62,11 +62,11 @@
            ng-model="favouriteUrl" 
            required>
     <span class="error" 
-          ng-show="signupForm.favouriteUrl.$invalid">This url needs to contain a 'http'.</span><br/>
+          ng-show="!signupForm.favouriteUrl.$pristine && signupForm.favouriteUrl.$invalid">This url needs to contain a 'http'.</span><br/>
   </div>
 
   <div class="row">
-    <label for="spam">agree to spam?</label>
+    <label for="spam">Send me spam</label>
     <input name="spam" 
            type="checkbox"
            ng-model="spam" 
