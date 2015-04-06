@@ -1,4 +1,4 @@
-ddescribe('page: forms - active-checkbox-label', function() {
+describe('page: forms - active-checkbox-label', function() {
 
   beforeEach(function() {
     browser.get('http://localhost:9000/#/forms/active-checkbox-label');

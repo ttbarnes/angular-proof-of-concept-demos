@@ -61,19 +61,17 @@ describe('page: home', function() {
 
     describe('ng-repeat', function(){
 
-      browser.get('http://localhost:9000/#/');
       var navLinks = element.all(by.css('.nav-ng-repeat a'));
 
       it('should have the correct number of ng-repeat items', function(){
         expect(navLinks.count()).toBe(2);
       });
 
-      it('should direct to the correct ng-repeat views - item 1', function(){
+      it('should direct to the correct ng-repeat views', function(){
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');
-      });
 
-      it('should direct to the correct ng-repeat views - item 2', function(){
+        browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/nested-ng-repeat');
       });
@@ -82,7 +80,6 @@ describe('page: home', function() {
 
     describe('services', function(){
 
-      browser.get('http://localhost:9000/#/');
       var navLinks = element.all(by.css('.nav-services a'));
 
       it('should have the correct number of services items', function(){
@@ -102,7 +99,6 @@ describe('page: home', function() {
 
     describe('directives', function(){
 
-      browser.get('http://localhost:9000/#/');
       var navLinks = element.all(by.css('.nav-directives a'));
 
       it('should have the correct number of directives items', function(){
@@ -123,7 +119,6 @@ describe('page: home', function() {
 
     describe('ui', function(){
 
-      browser.get('http://localhost:9000/#/');
       var navLinks = element.all(by.css('.nav-ui a'));
 
       it('should have the correct number of ui items', function(){
@@ -136,7 +131,6 @@ describe('page: home', function() {
       });
 
     });
-
 
   });
 
@@ -163,6 +157,5 @@ describe('page: home', function() {
     });
 
   });
-
 
 });
