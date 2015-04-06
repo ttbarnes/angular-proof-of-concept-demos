@@ -50,4 +50,57 @@ ddescribe('page: forms - form-validation', function() {
 
   });
 
+  describe('user name', function(){
+
+    var label = element(by.css('.row.user-name label'));
+    var input = element(by.css('.row.user-name input'));
+    var error = element(by.css('.row.user-name span.error'));
+
+    it('should have the correct html/angular label attribute', function(){
+      expect(label.getAttribute('for')).toEqual('userName');
+    });
+
+    it('should have the correct html/angular input attributes', function(){
+      expect(input.getAttribute('name')).toEqual('userName');
+      expect(input.getAttribute('ng-model')).toEqual('userName');
+      expect(input.getAttribute('required')).toBeDefined();
+    });
+
+    it('should have the correct ng-show values in the error message', function(){
+      expect(error.getAttribute('ng-show')).toEqual('!signupForm.userName.$pristine && signupForm.userName.$invalid');
+    });
+
+    it('should have error message hidden by default', function(){
+      expect(error.isDisplayed()).toBeFalsy();
+    });
+
+    it('should be able to add text to input and the error message remains hidden', function(){
+      input.sendKeys('Bruce wayne');
+      expect(error.isDisplayed()).toBeFalsy();
+    });
+
+    it('should display error message if you add text and then remove', function(){
+      input.clear();
+      input.sendKeys('Bruce wayne');
+      expect(error.isDisplayed()).toBeFalsy();
+      input.clear();
+      expect(error.isDisplayed()).toBeTruthy();
+    });
+
+    it('should display the correct error message copy', function(){
+      input.sendKeys('Bruce wayne');
+      input.clear();
+      expect(error.getText()).toEqual('This field is required.');
+    });
+
+
+  });
+
 });
+
+
+
+
+
+
+

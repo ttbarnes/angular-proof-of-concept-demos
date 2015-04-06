@@ -1,7 +1,7 @@
 <div class="signup-form">
   <form name="signupForm">
 
-    <div class="row">
+    <div class="row user-name">
       <label for="userName">name</label>
       <input name="userName" 
              type="text"
@@ -11,7 +11,7 @@
             ng-show="!signupForm.userName.$pristine && signupForm.userName.$invalid">This field is required.</span><br/>
     </div>
 
-    <div class="row">
+    <div class="row user-email">
       <label for="userEmail">email address</label>
       <input name="userEmail" 
              type="email"
@@ -21,7 +21,7 @@
             ng-show="!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid">Email address is invalid.</span><br/>
     </div>
 
-    <div class="row">
+    <div class="row user-number">
       <label for="userNumber">magic number</label>
       <input name="userNumber" 
              type="number"
@@ -31,7 +31,7 @@
             ng-show="signupForm.userNumber.$dirty && signupForm.userNumber.$invalid">That's not a valid number.</span><br/>
     </div>
 
-    <div class="row">
+    <div class="row language-used">
       <label for="languageUsed">which language do you use the most?</label>
       <input name="languageUsed" 
              type="radio"
@@ -56,7 +56,7 @@
     </div>
 
 
-    <div class="row">
+    <div class="row favourite-url">
       <label for="favouriteUrl">favourite url</label>
       <input name="favouriteUrl" 
              type="url"
@@ -66,7 +66,7 @@
             ng-show="!signupForm.favouriteUrl.$pristine && signupForm.favouriteUrl.$invalid">This url needs to contain a 'http'.</span><br/>
     </div>
 
-    <div class="row">
+    <div class="row spam">
       <label for="spam">Send me spam</label>
       <input name="spam" 
              type="checkbox"
