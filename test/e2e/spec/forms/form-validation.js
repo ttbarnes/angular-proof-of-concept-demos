@@ -206,7 +206,7 @@ ddescribe('page: forms - form-validation', function() {
 
   });
 
-  describe('user number', function(){
+  describe('language used', function(){
 
     var label = element(by.css('.row.language-used label'));
     var input = element.all(by.css('.row.language-used input'));
@@ -247,6 +247,8 @@ ddescribe('page: forms - form-validation', function() {
 
     it('should hide error message when an input is selected', function(){
       input.get(0).click();
+      expect(error.isDisplayed()).toBeFalsy();
+      input.get(1).click();
       expect(error.isDisplayed()).toBeFalsy();
     });
 
