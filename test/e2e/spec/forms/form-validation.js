@@ -206,6 +206,52 @@ ddescribe('page: forms - form-validation', function() {
 
   });
 
+  describe('user number', function(){
+
+    var label = element(by.css('.row.language-used label'));
+    var input = element.all(by.css('.row.language-used input'));
+    var error = element(by.css('.row.language-used span.error'));
+
+    it('should have the correct html/angular label attribute', function(){
+      expect(label.getAttribute('for')).toEqual('languageUsed');
+    });
+
+    it('should have the correct html/angular input attributes', function(){
+      expect(input.get(0).getAttribute('name')).toEqual('languageUsed');
+      expect(input.get(0).getAttribute('ng-model')).toEqual('language.used');
+      expect(input.get(0).getAttribute('required')).toBeDefined();
+      expect(input.get(0).getAttribute('value')).toEqual('angular');
+
+      expect(input.get(1).getAttribute('name')).toEqual('languageUsed');
+      expect(input.get(1).getAttribute('ng-model')).toEqual('language.used');
+      expect(input.get(1).getAttribute('required')).toBeDefined();
+      expect(input.get(1).getAttribute('value')).toEqual('html2');
+
+      expect(input.get(2).getAttribute('name')).toEqual('languageUsed');
+      expect(input.get(2).getAttribute('ng-model')).toEqual('language.used');
+      expect(input.get(2).getAttribute('required')).toBeDefined();
+      expect(input.get(2).getAttribute('value')).toEqual('css11');
+    });
+
+    it('should have the correct ng-show values in the error message', function(){
+      expect(error.getAttribute('ng-show')).toEqual('signupForm.languageUsed.$invalid');
+    });
+
+    it('should have error message displayed by default', function(){
+      expect(error.isDisplayed()).toBeTruthy();
+    });
+
+    it('should display the correct error message copy', function(){
+      expect(error.getText()).toEqual('Please select a language.');
+    });
+
+    it('should hide error message when an input is selected', function(){
+      input.get(0).click();
+      expect(error.isDisplayed()).toBeFalsy();
+    });
+
+  });
+
 });
 
 
