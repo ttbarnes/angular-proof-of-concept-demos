@@ -61,6 +61,7 @@ ddescribe('page: forms - form-validation', function() {
     });
 
     it('should have the correct html/angular input attributes', function(){
+      expect(input.getAttribute('type')).toEqual('text');
       expect(input.getAttribute('name')).toEqual('userName');
       expect(input.getAttribute('ng-model')).toEqual('userName');
       expect(input.getAttribute('required')).toBeDefined();
@@ -106,6 +107,7 @@ ddescribe('page: forms - form-validation', function() {
     });
 
     it('should have the correct html/angular input attributes', function(){
+      expect(input.getAttribute('type')).toEqual('email');
       expect(input.getAttribute('name')).toEqual('userEmail');
       expect(input.getAttribute('ng-model')).toEqual('userEmail');
       expect(input.getAttribute('required')).toBeDefined();
@@ -157,6 +159,7 @@ ddescribe('page: forms - form-validation', function() {
     });
 
     it('should have the correct html/angular input attributes', function(){
+      expect(input.getAttribute('type')).toEqual('number');
       expect(input.getAttribute('name')).toEqual('userNumber');
       expect(input.getAttribute('ng-model')).toEqual('userNumber');
       expect(input.getAttribute('required')).toBeDefined();
@@ -217,16 +220,19 @@ ddescribe('page: forms - form-validation', function() {
     });
 
     it('should have the correct html/angular input attributes', function(){
+      expect(input.get(0).getAttribute('type')).toEqual('radio');
       expect(input.get(0).getAttribute('name')).toEqual('languageUsed');
       expect(input.get(0).getAttribute('ng-model')).toEqual('language.used');
       expect(input.get(0).getAttribute('required')).toBeDefined();
       expect(input.get(0).getAttribute('value')).toEqual('angular');
 
+      expect(input.get(1).getAttribute('type')).toEqual('radio');
       expect(input.get(1).getAttribute('name')).toEqual('languageUsed');
       expect(input.get(1).getAttribute('ng-model')).toEqual('language.used');
       expect(input.get(1).getAttribute('required')).toBeDefined();
       expect(input.get(1).getAttribute('value')).toEqual('html2');
 
+      expect(input.get(2).getAttribute('type')).toEqual('radio');
       expect(input.get(2).getAttribute('name')).toEqual('languageUsed');
       expect(input.get(2).getAttribute('ng-model')).toEqual('language.used');
       expect(input.get(2).getAttribute('required')).toBeDefined();
@@ -266,6 +272,7 @@ describe('favourite url', function(){
 
     it('should have the correct html/angular input attributes', function(){
       expect(input.getAttribute('type')).toEqual('url');
+      expect(input.getAttribute('name')).toEqual('favouriteUrl');
       expect(input.getAttribute('ng-model')).toEqual('favouriteUrl');
       expect(input.getAttribute('required')).toBeDefined();
     });
