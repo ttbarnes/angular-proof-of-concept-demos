@@ -299,6 +299,44 @@ describe('favourite url', function(){
 
   });
 
+  describe('send spam', function(){
+
+    var label = element(by.css('.row.spam label'));
+    var input = element(by.css('.row.spam input'));
+    var error = element(by.css('.row.spam span.error'));
+
+    it('should have the correct html/angular label attribute', function(){
+      expect(label.getAttribute('for')).toEqual('spam');
+    });
+
+    it('should have the correct html/angular input attributes', function(){
+      expect(input.getAttribute('type')).toEqual('checkbox');
+      expect(input.getAttribute('ng-model')).toEqual('spam');
+      expect(input.getAttribute('required')).toBeDefined();
+    });
+
+    it('should have the correct ng-show values in the error message', function(){
+      expect(error.getAttribute('ng-show')).toEqual('signupForm.spam.$invalid');
+    });
+
+    it('should have an error message visible by default', function(){
+      expect(error.isDisplayed()).toBeTruthy();
+    });
+
+    it('should hide the error message after input click', function(){
+      input.click();
+      expect(error.isDisplayed()).toBeFalsy();
+    });
+
+    it('should show the error message if checked and then unchecked', function(){
+      input.click();
+      expect(error.isDisplayed()).toBeFalsy();
+      input.click();
+      expect(error.isDisplayed()).toBeTruthy();
+    });
+
+  });
+
 });
 
 
