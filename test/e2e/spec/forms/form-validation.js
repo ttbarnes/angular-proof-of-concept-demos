@@ -20,7 +20,7 @@ ddescribe('page: forms - form-validation', function() {
   var label = element.all(by.css('.signup-form label'));
   var input = element.all(by.css('.signup-form input'));
   var validationTextErrors = element(by.css('.signup-form .validation-text.errors'));
-  var validationTextValid = element(by.css('.signup-form .validation-text.valid'));
+  var validationTextSuccess = element(by.css('.signup-form .validation-text.success'));
 
   describe('initialisation', function(){
 
@@ -40,12 +40,13 @@ ddescribe('page: forms - form-validation', function() {
       expect(validationTextErrors).toBeDefined();
       expect(validationTextErrors.getAttribute('ng-show')).toEqual('!!signupForm.$error.required');
       expect(validationTextErrors.isDisplayed()).toBeTruthy();
+      expect(validationTextErrors.getText()).toEqual('Errors are present.');
     });
 
     it('should have hidden success/congratulations text', function(){
-      expect(validationTextValid).toBeDefined();
-      expect(validationTextValid.getAttribute('ng-hide')).toEqual('signupForm.$error.required');
-      expect(validationTextValid.isDisplayed()).toBeFalsy();
+      expect(validationTextSuccess).toBeDefined();
+      expect(validationTextSuccess.getAttribute('ng-hide')).toEqual('signupForm.$error.required');
+      expect(validationTextSuccess.isDisplayed()).toBeFalsy();
     });
 
   });
