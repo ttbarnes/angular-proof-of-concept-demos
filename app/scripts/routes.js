@@ -47,8 +47,8 @@ angular.module('routes', ['ui.router'])
     },
     ui: {
       name: 'ui',
-      toggleMenuWithNgFocusNgBlur: {
-        name: 'ui.toggleMenuWithNgFocusNgBlur'
+      dropDownMenuWithNgFocusNgBlur: {
+        name: 'ui.dropDownMenuWithNgFocusNgBlur'
       }
     }
   })
@@ -172,11 +172,11 @@ angular.module('routes', ['ui.router'])
         url: '/ui',
         templateUrl: 'views/ui/index.html'
       })
-      .state(states.ui.toggleMenuWithNgFocusNgBlur.name, {
-        url: '/toggle-menu-with-ng-focus-and-ng-blur',
-        templateUrl: 'views/ui/toggle-menu-with-ng-focus-and-ng-blur.html',
+      .state(states.ui.dropDownMenuWithNgFocusNgBlur.name, {
+        url: '/dropdown-menu-with-ng-focus-and-ng-blur',
+        templateUrl: 'views/ui/dropdown-menu-with-ng-focus-and-ng-blur.html',
         data: {
-          pageTitle: 'toggle menu with ng-focus and ng-blur'
+          pageTitle: 'drop down menu with ng-focus and ng-blur'
         }
       });
 
