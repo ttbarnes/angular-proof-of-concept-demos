@@ -16,7 +16,7 @@ describe('page: forms - form-validation', function() {
     });
   };
 
-  var rows = element.all(by.css('.signup-form .row'));
+  var rows = element.all(by.css('.signup-form form > .row'));
   var label = element.all(by.css('.signup-form label'));
   var input = element.all(by.css('.signup-form input'));
   var validationTextErrors = element(by.css('.signup-form .validation-text.errors'));
@@ -214,7 +214,7 @@ describe('page: forms - form-validation', function() {
 
     var label = element(by.css('.row.language-used label'));
     var input = element.all(by.css('.row.language-used input'));
-    var error = element(by.css('.row.language-used span.error'));
+    var error = element(by.css('.row.language-used div.row.error'));
 
     it('should have the correct html/angular label attribute', function(){
       expect(label.getAttribute('for')).toEqual('languageUsed');

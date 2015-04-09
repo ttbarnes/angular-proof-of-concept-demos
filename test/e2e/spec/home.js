@@ -45,6 +45,7 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct form views', function(){
+        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/form-validation');
 
@@ -68,10 +69,12 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct ng-repeat views', function(){
+        //browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');
-
-        browser.get('http://localhost:9000/#/');
+      });
+      it('should direct to the correct ng-repeat views', function(){
+      //browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/nested-ng-repeat');
       });
@@ -87,11 +90,12 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct services views', function(){
-        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/simple-service');
+      });
 
-        browser.get('http://localhost:9000/#/');
+      it('should direct to the correct services views', function(){
+        //browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/gifbase');
       });
@@ -107,11 +111,13 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct directives views - item 1', function(){
+        //browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/active-hover-directive');
       });
 
       it('should direct to the correct directives views - item 2', function(){
+        browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/random-robot-image');
       });
@@ -128,7 +134,7 @@ describe('page: home', function() {
 
       it('should direct to the correct ui views', function(){
         navLinks.get(0).click();
-        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ui/toggle-menu-with-ng-focus-and-ng-blur');
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ui/dropdown-menu-with-ng-focus-and-ng-blur');
       });
 
     });
