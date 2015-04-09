@@ -345,6 +345,37 @@ describe('favourite url', function(){
 
   });
 
+  describe('global error/congratulations message', function(){
+
+    var inputUserName = element(by.css('.row.user-name input'));
+    var inputUserEmail = element(by.css('.row.user-email input'));
+    var inputUserNumber = element(by.css('.row.user-number input'));
+    var inputLanguageUsed = element.all(by.css('.row.language-used input'));
+    var inputFavouriteUrl = element(by.css('.row.favourite-url input'));
+    var inputSpam = element(by.css('.row.spam input'));
+
+    function mockInputData() {
+      inputUserName.sendKeys('asdfasdf');
+      inputUserEmail.sendKeys('asdf@asdf.com');
+      inputUserNumber.sendKeys('12345');
+      inputLanguageUsed.get(0).click();
+      inputFavouriteUrl.sendKeys('http://google.com');
+      inputSpam.click();
+    }
+
+    it('should hide error message and show congratulations when form is valid', function(){
+      mockInputData();
+      expect(validationTextSuccess.isDisplayed()).toBeTruthy();
+      expect(validationTextErrors.isDisplayed()).toBeFalsy();
+    });
+
+    it('should have the correct congratulations copy ', function(){
+      mockInputData();
+      expect(validationTextSuccess.getText()).toEqual('Congratulations! All fields have been entered correctly.');
+    });
+
+  });
+
 });
 
 
