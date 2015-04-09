@@ -1,0 +1,15 @@
+.active-hover-items > div {
+  float:left;
+  clear:both;
+  padding:0.5em 1em;
+  transition:all 0.3s ease;
+}
+
+.active-hover {
+  background:$blue-1;
+  opacity:1;
+}
+
+.inactive-hover {
+  opacity:0.4;
+}

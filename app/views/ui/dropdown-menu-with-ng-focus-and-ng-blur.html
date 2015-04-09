@@ -1,18 +1,15 @@
 <div ng-init="focus=false;blur=false;"></div>
 
+<input type="button" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" value="i'd like a drop down menu please" />
+
+<!-- alternatively -->
 <!--
 <input type="button" ng-focus="focus=true" ng-blur="focus=false;" value="toggle menu" />
 -->
-<!-- or -->
-<input type="button" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" value="toggle menu" />
 
-<br/>
-<br/>
-<br/>
-<p>focus: {{focus}}</p>
-<p>blur: {{blur}}</p>
+<pre>focus: {{focus}} <br/>blur: {{blur}}</pre>
 
 
 <div ng-show="focus" style="border:solid 2px red;width:250px;padding:20px;">
-  <p>bingo <br/>i'm open</p>
+  <p>here you go, <br/>i'm open.</p>
 </div>

@@ -7,8 +7,11 @@ body,
 body {
   padding:0;
   margin:0;
-  font-family:helvetica, arial;
-  color:#111;
+  color:$black-1;
+  font:{
+    size:14px;
+    family:helvetica, arial
+  }
 }
 
 header,

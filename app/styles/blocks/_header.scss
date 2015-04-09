@@ -1,18 +1,18 @@
 header {
-  background:#A6120D;
+  background:$red-1;
   margin-bottom:30px;
 
   h1 {
     font-weight:300;
     a {
-      color:#F2F2F2;
+      color:$white-1;
     }
   }
 
   h2 {
     font-weight:300;
     margin-top:10px;
-    color:#D2D2D2;
+    color:$grey-1;
   }
 
 }

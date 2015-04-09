@@ -1,4 +1,4 @@
-ddescribe('page: forms - form-validation', function() {
+describe('page: forms - form-validation', function() {
 
   beforeEach(function() {
     browser.get('http://localhost:9000/#/forms/form-validation');
@@ -377,10 +377,3 @@ describe('favourite url', function(){
   });
 
 });
-
-
-
-
-
-
-

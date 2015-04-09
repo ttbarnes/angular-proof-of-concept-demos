@@ -1,0 +1,36 @@
+.task-filter-toggle {
+  padding:0 0 10px;
+  margin:0;
+  li {
+    list-style-type:none;
+    display:inline-block;
+    vertical-align:top;
+    padding:0 10px;
+    cursor:pointer;
+    &.active {
+      background:#333;
+      color:#EEE;
+    }
+  }
+}
+
+.task-item {
+  float:left;
+  width:50%;
+  padding:10px;
+  box-sizing:border-box;
+  
+  .inner {
+    background:#EEE;
+    padding:20px;
+  }
+
+  h4,
+  p {
+    margin:0;
+  }
+  h4 {
+    margin-bottom:5px;
+  }
+
+}

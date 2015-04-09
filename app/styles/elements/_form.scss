@@ -9,27 +9,32 @@ label {
 input,
 .btn {
   padding:1em;
+  font-size:14px;
+  width:100%;
+  @media (min-width:600px) {
+    width:auto;
+  }
 }
 
 .btn {
-  background:#BADA55;
+  background:$green-1;
   color:#FFF;
+  border:0 none;
+  padding:1.5em 2em;
+  -webkit-appearance:none;
 }
 
 input:disabled,
 .btn:disabled {
-  background:darkred;
+  background:$red-1;
 }
 
 input[type="radio"] {
   float:left;
+  width:auto;
+  margin:0 5px 5px 0;
 }
 
 label {
   display:block;
-}
-
-input[type="text"],
-.btn {
-  padding:1.5em;
 }

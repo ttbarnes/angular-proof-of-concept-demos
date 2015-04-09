@@ -1,6 +1,7 @@
 // bower:scss
 // endbower
 
+@import 'modules/_config';
 @import '_misc';
 @import '_typography';
 @import 'blocks/_layout-containers';
@@ -11,7 +12,9 @@
 @import 'elements/_form';
 
 @import 'view-specific/_home';
-@import 'view-specific/forms/_active-checkbox-label';
+@import 'view-specific/forms/_forms';
+@import 'view-specific/ng-repeat/_ng-repeat';
+@import 'view-specific/directives/_directives';
 
 
 
@@ -30,58 +33,3 @@
   }
 }
 */
-
-.task-filter-toggle {
-  padding:0 0 10px;
-  margin:0;
-  li {
-    list-style-type:none;
-    display:inline-block;
-    vertical-align:top;
-    padding:0 10px;
-    cursor:pointer;
-    &.active {
-      background:#333;
-      color:#EEE;
-    }
-  }
-}
-
-.task-item {
-  float:left;
-  width:50%;
-  padding:10px;
-  box-sizing:border-box;
-  
-  .inner {
-    background:#EEE;
-    padding:20px;
-  }
-
-  h4,
-  p {
-    margin:0;
-  }
-  h4 {
-    margin-bottom:5px;
-  }
-
-}
-
-
-.active-hover-items > div {
-  float:left;
-  clear:both;
-  transition:all 0.3s ease;
-}
-
-.active-hover {
-  background:#BADA55;
-  opacity:1;
-}
-
-.inactive-hover {
-  opacity:0.4;
-}
-
-

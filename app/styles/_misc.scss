@@ -1,3 +1,9 @@
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
+
+* {
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}

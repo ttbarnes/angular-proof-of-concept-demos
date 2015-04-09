@@ -1,0 +1,15 @@
+.signup-form {
+  label {
+    padding-bottom:5px;
+    @media (min-width:600px) {
+      float:left;
+      width:140px;
+    }
+  }
+  .radio-wrap {
+    float:left;
+    .row:first-child {
+      padding-top:0;
+    }
+  }
+}
