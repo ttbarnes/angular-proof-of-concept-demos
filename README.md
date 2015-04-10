@@ -20,6 +20,20 @@ POC demos with pure angular
 4) Run the tests: `grunt test` (currently `grunt serve` needs to be running at the same time)
 
 
+## What's included
+
+- various examples of:
+  - forms
+  - ng-repeat
+  - services
+  - directives
+  - ui
+- unit tests with jasmine, karma
+- e2e tests with protractor
+
+Please note, ui-router is in use for this app.
+
+
 ## Contributions
 
 Always welcome, please submit a PR :-)
