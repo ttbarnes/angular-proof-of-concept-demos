@@ -17,12 +17,15 @@ describe('Controller: nestedNgRepeatCtrl', function () {
   }));
 
   describe('fruits object', function(){
-    it('should have an object', function(){
-      expect(scope.fruits.length).toEqual(3);
+
+    it('should have 3 items', function(){
+      expect(scope.fruits).toBeDefined();
     });
+
     it('should have 3 fruits defined', function(){
       expect(scope.fruits.length).toEqual(3);
     });
+
   });
 
   describe('fruits object - apple', function(){

@@ -16,6 +16,10 @@ describe('Controller: activeCheckboxLabelCtrl', function () {
     });
   }));
 
+  it('should have items defined', function () {
+    expect(scope.items).toBeDefined();
+  });
+
   it('should have 3 items defined', function () {
     expect(scope.items.length).toBe(3);
   });

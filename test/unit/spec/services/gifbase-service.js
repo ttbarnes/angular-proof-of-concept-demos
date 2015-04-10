@@ -4,14 +4,12 @@ describe('Service: gifbaseService', function(){
 
   var gifbaseService;
 
-
   beforeEach(function (){
     module('proofOfConceptDemos');
     inject(function(_gifbaseService_) {
       gifbaseService = _gifbaseService_;
     });
   });
-
 
   describe('initialisation', function(){
 

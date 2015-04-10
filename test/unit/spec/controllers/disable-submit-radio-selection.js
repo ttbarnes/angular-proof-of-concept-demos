@@ -16,6 +16,9 @@ describe('Controller: disableSubmitRadioSelectionCtrl', function () {
     });
   }));
 
+  it('should have people defined', function(){
+    expect(scope.people).toBeDefined();
+  });
 
   it('should have 4 items/person defined', function(){
     expect(scope.people.length).toBe(4);
