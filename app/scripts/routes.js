@@ -49,7 +49,10 @@ angular.module('routes', ['ui.router'])
       name: 'ui',
       dropDownMenuWithNgFocusNgBlur: {
         name: 'ui.dropDownMenuWithNgFocusNgBlur'
-      }
+      },
+      ngClickShowHide: {
+        name: 'ui.ngClickShowHide'
+      },
     }
   })
 
@@ -176,6 +179,13 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/ui/dropdown-menu-with-ng-focus-and-ng-blur.html',
         data: {
           pageTitle: 'drop down menu with ng-focus and ng-blur'
+        }
+      })
+      .state(states.ui.ngClickShowHide.name, {
+        url: '/ng-click-show-hide',
+        templateUrl: 'views/ui/ng-click-show-hide.html',
+        data: {
+          pageTitle: 'ng-click show/hide'
         }
       });
 

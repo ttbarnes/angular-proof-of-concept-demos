@@ -31,9 +31,9 @@ describe('page: home', function() {
       expect(parentLists.count()).toEqual(5);
     });
 
-    it('should have a total of 15 list items ', function(){
+    it('should have a total of 16 list items ', function(){
       var elements = element.all(protractor.By.css('.home-nav li'));
-      expect(elements.count()).toEqual(15);
+      expect(elements.count()).toEqual(16);
     });
 
     describe('forms', function(){
@@ -129,12 +129,17 @@ describe('page: home', function() {
       var navLinks = element.all(by.css('.nav-ui a'));
 
       it('should have the correct number of ui items', function(){
-        expect(navLinks.count()).toBe(1);
+        expect(navLinks.count()).toBe(2);
       });
 
-      it('should direct to the correct ui views', function(){
+      it('should direct to the correct ui views - item 1', function(){
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ui/dropdown-menu-with-ng-focus-and-ng-blur');
+      });
+
+      it('should direct to the correct ui views - item 2', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ui/ng-click-show-hide');
       });
 
     });
