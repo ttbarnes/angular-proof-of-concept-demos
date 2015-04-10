@@ -73,7 +73,6 @@ angular.module('routes', ['ui.router'])
       .state(states.forms.formValidation.name, {
         url: '/form-validation',
         templateUrl: 'views/forms/form-validation.html',
-        controller: 'formValidationCtrl',
         data: {
           pageTitle: 'form validation'
         }
