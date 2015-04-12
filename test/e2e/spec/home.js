@@ -45,15 +45,16 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct form views', function(){
-        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/form-validation');
+      });
 
-        browser.get('http://localhost:9000/#/');
+      it('should direct to the correct form views', function(){
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/disable-radio');
+      });
 
-        browser.get('http://localhost:9000/#/');
+       it('should direct to the correct form views', function(){
         navLinks.get(2).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/forms/active-checkbox-label');
       });
@@ -69,12 +70,11 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct ng-repeat views', function(){
-        //browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/ng-repeat-filter-toggle');
       });
+
       it('should direct to the correct ng-repeat views', function(){
-      //browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/ng-repeat/nested-ng-repeat');
       });
@@ -90,13 +90,11 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct services views', function(){
-        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/simple-service');
       });
 
       it('should direct to the correct services views', function(){
-        //browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/gifbase');
       });
@@ -112,7 +110,7 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct directives views - item 1', function(){
-        //browser.get('http://localhost:9000/#/');
+        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/active-hover-directive');
       });
@@ -127,6 +125,7 @@ describe('page: home', function() {
 
     describe('ui', function(){
 
+      browser.get('http://localhost:9000/#/');
       var navLinks = element.all(by.css('.nav-ui a'));
 
       it('should have the correct number of ui items', function(){
