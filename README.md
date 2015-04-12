@@ -33,6 +33,11 @@ various examples of:
 
 Please note, [ui-router] (https://github.com/angular-ui/ui-router) is in use.
 
+## Misc
+
+You'll notice that instead of including routes in `app.js`, we have our own angular module called `routes`.
+
+In `app/scripts/routes.js`, we use [constants] (https://docs.angularjs.org/guide/providers) to manage our state names, and hook these up with ui-router `$stateProvider` in the config.
 
 ## Contributions
 
