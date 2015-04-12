@@ -471,6 +471,25 @@ module.exports = function (grunt) {
     'protractor:run'
   ]);
 
+  grunt.registerTask('test', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
+    grunt.task.run([
+      'clean:server',
+      'wiredep',
+      'wiredep:test',
+      'concurrent:server',
+      'concurrent:test',
+      'autoprefixer',
+      'connect:livereload',
+      'karma',
+      'protractor_webdriver',
+      'protractor:run'
+    ]);
+  });
+
+
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
