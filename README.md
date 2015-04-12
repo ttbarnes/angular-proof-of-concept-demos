@@ -17,21 +17,21 @@ POC demos with pure angular
 
 3) Run the app: `grunt serve`
 
-4) Run the tests: `grunt test` (this starts the server, unit and e2e tests)
+4) Run the tests: `grunt test` (this starts the server, runs unit and e2e tests)
 
 
 ## What's included
 
-- various examples of:
-  - forms
-  - ng-repeat
-  - services
-  - directives
-  - ui
+various examples of:
+- forms
+- ng-repeat
+- services
+- directives
+- ui
 - unit tests with jasmine, karma
 - e2e tests with protractor
 
-Please note, ui-router is in use for this app.
+Please note, [ui-router] (https://github.com/angular-ui/ui-router) is in use.
 
 
 ## Contributions
