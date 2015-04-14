@@ -16,11 +16,11 @@ describe('page: forms - form-validation', function() {
     });
   };
 
-  var rows = element.all(by.css('.signup-form form > .row'));
-  var label = element.all(by.css('.signup-form label'));
-  var input = element.all(by.css('.signup-form input'));
-  var validationTextErrors = element(by.css('.signup-form .validation-text.errors'));
-  var validationTextSuccess = element(by.css('.signup-form .validation-text.success'));
+  var rows = element.all(by.css('.user-form form > .row'));
+  var label = element.all(by.css('.user-form label'));
+  var input = element.all(by.css('.user-form input'));
+  var validationTextErrors = element(by.css('.user-form .validation-text.errors'));
+  var validationTextSuccess = element(by.css('.user-form .validation-text.success'));
 
   describe('initialisation', function(){
 
@@ -38,14 +38,14 @@ describe('page: forms - form-validation', function() {
 
     it('should show error present text', function(){
       expect(validationTextErrors).toBeDefined();
-      expect(validationTextErrors.getAttribute('ng-show')).toEqual('!!signupForm.$error.required');
+      expect(validationTextErrors.getAttribute('ng-show')).toEqual('!!userForm.$error.required');
       expect(validationTextErrors.isDisplayed()).toBeTruthy();
       expect(validationTextErrors.getText()).toEqual('Errors are present.');
     });
 
     it('should have hidden success/congratulations text', function(){
       expect(validationTextSuccess).toBeDefined();
-      expect(validationTextSuccess.getAttribute('ng-hide')).toEqual('signupForm.$error.required');
+      expect(validationTextSuccess.getAttribute('ng-hide')).toEqual('userForm.$error.required');
       expect(validationTextSuccess.isDisplayed()).toBeFalsy();
     });
 
@@ -69,7 +69,7 @@ describe('page: forms - form-validation', function() {
     });
 
     it('should have the correct ng-show values in the error message', function(){
-      expect(error.getAttribute('ng-show')).toEqual('!signupForm.userName.$pristine && signupForm.userName.$invalid');
+      expect(error.getAttribute('ng-show')).toEqual('!userForm.userName.$pristine && userForm.userName.$invalid');
     });
 
     it('should have error message hidden by default', function(){
@@ -115,7 +115,7 @@ describe('page: forms - form-validation', function() {
     });
 
     it('should have the correct ng-show values in the error message', function(){
-      expect(error.getAttribute('ng-show')).toEqual('!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid');
+      expect(error.getAttribute('ng-show')).toEqual('!userForm.userEmail.$pristine && userForm.userEmail.$invalid');
     });
 
     it('should have error message hidden by default', function(){
@@ -167,7 +167,7 @@ describe('page: forms - form-validation', function() {
     });
 
     it('should have the correct ng-show values in the error message', function(){
-      expect(error.getAttribute('ng-show')).toEqual('signupForm.userNumber.$dirty && signupForm.userNumber.$invalid');
+      expect(error.getAttribute('ng-show')).toEqual('userForm.userNumber.$dirty && userForm.userNumber.$invalid');
     });
 
     it('should have error message hidden by default', function(){
@@ -241,7 +241,7 @@ describe('page: forms - form-validation', function() {
     });
 
     it('should have the correct ng-show values in the error message', function(){
-      expect(error.getAttribute('ng-show')).toEqual('signupForm.languageUsed.$invalid');
+      expect(error.getAttribute('ng-show')).toEqual('userForm.languageUsed.$invalid');
     });
 
     it('should have error message displayed by default', function(){
@@ -279,7 +279,7 @@ describe('favourite url', function(){
     });
 
     it('should have the correct ng-show values in the error message', function(){
-      expect(error.getAttribute('ng-show')).toEqual('!signupForm.favouriteUrl.$pristine && signupForm.favouriteUrl.$invalid');
+      expect(error.getAttribute('ng-show')).toEqual('!userForm.favouriteUrl.$pristine && userForm.favouriteUrl.$invalid');
     });
 
     it('should have error message hidden by default', function(){
@@ -324,7 +324,7 @@ describe('favourite url', function(){
     });
 
     it('should have the correct ng-show values in the error message', function(){
-      expect(error.getAttribute('ng-show')).toEqual('signupForm.spam.$invalid');
+      expect(error.getAttribute('ng-show')).toEqual('userForm.spam.$invalid');
     });
 
     it('should have an error message visible by default', function(){

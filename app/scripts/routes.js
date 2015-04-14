@@ -45,6 +45,12 @@ angular.module('routes', ['ui.router'])
         name: 'directives.randomRobotImage'
       }
     },
+    scopeWatch: {
+      name: 'scopeWatch',
+      formCompletionValue: {
+        name: 'scopeWatch.formCompletionValue'
+      }
+    },
     ui: {
       name: 'ui',
       dropDownMenuWithNgFocusNgBlur: {
@@ -164,6 +170,22 @@ angular.module('routes', ['ui.router'])
         templateUrl: 'views/directives/random-robot-image.html',
         data: {
           pageTitle: 'random robot image'
+        }
+      })
+
+      ////////////////////
+      //scope watch
+      ////////////////////
+      .state(states.scopeWatch.name, {
+        url: '/scope-watch',
+        templateUrl: 'views/scope-watch/index.html'
+      })
+      .state(states.scopeWatch.formCompletionValue.name, {
+        url: '/form-completion-value',
+        templateUrl: 'views/scope-watch/form-completion-value.html',
+        controller:'formCompletionValueCtrl',
+        data: {
+          pageTitle: 'form completion value'
         }
       })
 

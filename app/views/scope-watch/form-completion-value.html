@@ -1,0 +1,36 @@
+<div class="user-form">
+  <form name="userForm">
+    <div class="row">
+      <label for="userName">name</label>
+      <input type="text" name="userName" ng-model="userName" placeholder="Clark Kent" />
+    </div>
+    <div class="row">
+      <label for="userAbout">about</label>
+      <input type="text" name="userAbout" ng-model="userAbout" placeholder="High flyer" />
+    </div>
+    <div class="row">
+      <label for="userFavouriteColours">favourite colours</label>
+      <input type="text" name="userFavouriteColours" ng-model="userFavouriteColours" placeholder="red and blue" />
+    </div>
+    <div class="row">
+      <label for="userHobbies">hobbies</label>
+      <input type="text" name="userHobbies" ng-model="userHobbies" placeholder="lasers" />
+    </div>
+    <div class="row">
+      <label for="userTerms">accept terms?</label>
+      <input type="checkbox" name="userTerms" ng-model="userTerms" />
+    </div>
+  </form>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p>name length: {{userName.length}}</p>
+<p>about length: {{userAbout.length}}</p>
+<p>favouriteColours length: {{userFavouriteColours.length}}</p>
+<p>hobbies length: {{userHobbies.length}}</p>
+<p>terms: {{userTerms}}</p>
+<br/>
+<p><strong>Completion: {{completionTotal}}%</strong></p>

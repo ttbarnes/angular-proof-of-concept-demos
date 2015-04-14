@@ -28,6 +28,12 @@ exports.config = {
         shardTestFiles: false,
         maxInstances: 1,
         browserName: 'chrome',
+        specs: ['e2e/spec/scope-watch/*.js']
+    },
+    {
+        shardTestFiles: false,
+        maxInstances: 1,
+        browserName: 'chrome',
         specs: ['e2e/spec/services/*.js']
     },
     {

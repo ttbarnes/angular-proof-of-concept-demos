@@ -1,5 +1,5 @@
-<div class="signup-form">
-  <form name="signupForm">
+<div class="user-form">
+  <form name="userForm">
 
     <div class="row user-name">
       <label for="userName">name</label>
@@ -8,7 +8,7 @@
              ng-model="userName" 
              required>
       <span class="error" 
-            ng-show="!signupForm.userName.$pristine && signupForm.userName.$invalid">This field is required.</span><br/>
+            ng-show="!userForm.userName.$pristine && userForm.userName.$invalid">This field is required.</span><br/>
     </div>
 
     <div class="row user-email">
@@ -18,7 +18,7 @@
              ng-model="userEmail" 
              required>
       <span class="error" 
-            ng-show="!signupForm.userEmail.$pristine && signupForm.userEmail.$invalid">Email address is invalid.</span><br/>
+            ng-show="!userForm.userEmail.$pristine && userForm.userEmail.$invalid">Email address is invalid.</span><br/>
     </div>
 
     <div class="row user-number">
@@ -28,7 +28,7 @@
              ng-model="userNumber" 
              required>
       <span class="error" 
-            ng-show="signupForm.userNumber.$dirty && signupForm.userNumber.$invalid">That's not a valid number.</span><br/>
+            ng-show="userForm.userNumber.$dirty && userForm.userNumber.$invalid">That's not a valid number.</span><br/>
     </div>
 
     <div class="row language-used">
@@ -56,7 +56,7 @@
                  required/>CSS 11
         </div>
         <div class="row error" 
-             ng-show="signupForm.languageUsed.$invalid">Please select a language.</span>
+             ng-show="userForm.languageUsed.$invalid">Please select a language.</span>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
              ng-model="favouriteUrl" 
              required>
       <span class="error" 
-            ng-show="!signupForm.favouriteUrl.$pristine && signupForm.favouriteUrl.$invalid">This url needs to contain 'http://'.</span><br/>
+            ng-show="!userForm.favouriteUrl.$pristine && userForm.favouriteUrl.$invalid">This url needs to contain 'http://'.</span><br/>
     </div>
 
     <div class="row spam">
@@ -79,15 +79,15 @@
              ng-model="spam" 
              required>
       <span class="error" 
-            ng-show="signupForm.spam.$invalid">Please accept spam to continue.</span><br/>
+            ng-show="userForm.spam.$invalid">Please accept spam to continue.</span><br/>
     </div>
 
     <br/>
     <br/>
     <br/>
 
-    <p class="validation-text errors" ng-show="!!signupForm.$error.required">Errors are present.</p>
-    <p class="validation-text success" ng-hide="signupForm.$error.required"><strong>Congratulations! All fields have been entered correctly.</strong></p>
+    <p class="validation-text errors" ng-show="!!userForm.$error.required">Errors are present.</p>
+    <p class="validation-text success" ng-hide="userForm.$error.required"><strong>Congratulations! All fields have been entered correctly.</strong></p>
 
   </form>
 </div>
