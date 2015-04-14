@@ -1,22 +1,22 @@
 <div class="user-form">
   <form name="userForm">
-    <div class="row">
+    <div class="row user-name">
       <label for="userName">name</label>
       <input type="text" name="userName" ng-model="userName" placeholder="Clark Kent" />
     </div>
-    <div class="row">
+    <div class="row user-about">
       <label for="userAbout">about</label>
-      <input type="text" name="userAbout" ng-model="userAbout" placeholder="High flyer" />
+      <input type="text" name="userAbout" ng-model="userAbout" placeholder="high flyer" />
     </div>
-    <div class="row">
+    <div class="row user-favourite-colours">
       <label for="userFavouriteColours">favourite colours</label>
       <input type="text" name="userFavouriteColours" ng-model="userFavouriteColours" placeholder="red and blue" />
     </div>
-    <div class="row">
+    <div class="row user-hobbies">
       <label for="userHobbies">hobbies</label>
       <input type="text" name="userHobbies" ng-model="userHobbies" placeholder="lasers" />
     </div>
-    <div class="row">
+    <div class="row user-terms">
       <label for="userTerms">accept terms?</label>
       <input type="checkbox" name="userTerms" ng-model="userTerms" />
     </div>
@@ -27,10 +27,12 @@
 <br/>
 <br/>
 <br/>
-<p>name length: {{userName.length}}</p>
-<p>about length: {{userAbout.length}}</p>
-<p>favouriteColours length: {{userFavouriteColours.length}}</p>
-<p>hobbies length: {{userHobbies.length}}</p>
-<p>terms: {{userTerms}}</p>
-<br/>
-<p><strong>Completion: {{completionTotal}}%</strong></p>
+<div class="row completion-info">
+  <p>name length: {{userName.length}}</p>
+  <p>about length: {{userAbout.length}}</p>
+  <p>favouriteColours length: {{userFavouriteColours.length}}</p>
+  <p>hobbies length: {{userHobbies.length}}</p>
+  <p>terms: {{userTerms}}</p>
+  <br/>
+  <p class="total"><strong>Completion: <span>{{completionTotal}}%</span></strong></p>
+</div>

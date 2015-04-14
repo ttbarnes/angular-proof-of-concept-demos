@@ -24,16 +24,16 @@ describe('page: home', function() {
       expect(element(protractor.By.css('.home-nav')).isPresent()).toBe(true);
     });
 
-    it('should have 5 parent lists/list items', function(){
+    it('should have 6 parent lists/list items', function(){
       var parentListItems = element.all(protractor.By.css('.home-nav > li'));
       var parentLists = element.all(protractor.By.css('.home-nav > ol'));
-      expect(parentListItems.count()).toEqual(5);
-      expect(parentLists.count()).toEqual(5);
+      expect(parentListItems.count()).toEqual(6);
+      expect(parentLists.count()).toEqual(6);
     });
 
-    it('should have a total of 16 list items ', function(){
+    it('should have the correct amount of list items ', function(){
       var elements = element.all(protractor.By.css('.home-nav li'));
-      expect(elements.count()).toEqual(16);
+      expect(elements.count()).toEqual(18);
     });
 
     describe('forms', function(){
@@ -123,9 +123,23 @@ describe('page: home', function() {
 
     });
 
+    describe('scope watch', function(){
+
+      var navLinks = element.all(by.css('.nav-scope-watch a'));
+
+      it('should have the correct number of ui items', function(){
+        expect(navLinks.count()).toBe(1);
+      });
+
+      it('should direct to the correct scope watch views', function(){
+        navLinks.get(0).click();
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/scope-watch/form-completion-value');
+      });
+
+    });
+
     describe('ui', function(){
 
-      browser.get('http://localhost:9000/#/');
       var navLinks = element.all(by.css('.nav-ui a'));
 
       it('should have the correct number of ui items', function(){
