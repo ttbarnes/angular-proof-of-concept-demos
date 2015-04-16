@@ -39,7 +39,9 @@ Please note, [ui-router] (https://github.com/angular-ui/ui-router) is in use.
 
 `grunt test` - starts the server, runs unit and e2e tests.
 
-`grunt karma` - run the unit tests.
+`grunt karma:unit` - run the unit tests once only.
+
+`grunt karma:continuous` - run the unit tests and auto watch.
 
 ## Misc
 

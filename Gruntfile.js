@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/**/*.js'],
-        tasks: ['newer:jshint:all', 'karma:server'],
+        tasks: ['newer:jshint:all', 'karma:continuous'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
@@ -404,7 +404,7 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       },
-      server: {
+      continuous: {
         configFile: 'test/karma.conf.js',
         singleRun: false,
         autoWatch: true
