@@ -487,7 +487,7 @@ module.exports = function (grunt) {
       'concurrent:test',
       'autoprefixer',
       'connect:livereload',
-      'karma',
+      'karma:unit',
       'protractor_webdriver',
       'protractor:run'
     ]);
