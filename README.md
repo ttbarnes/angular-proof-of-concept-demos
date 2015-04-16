@@ -36,7 +36,8 @@ Please note, [ui-router] (https://github.com/angular-ui/ui-router) is in use.
 ## Grunt tasks
 
 `grunt serve` - starts the server, watches for changes and runs unit tests if any changes to js.
-`grunt` - starts the server, runs unit and e2e tests.
+`grunt test` - starts the server, runs unit and e2e tests.
+!!!`grunt` - more info here?
 
 ## Misc
 
