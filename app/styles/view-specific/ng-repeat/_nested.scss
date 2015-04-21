@@ -1,0 +1,28 @@
+.nested-ng-repeat {
+  strong {
+    display:block;
+    padding:15px 0 5px 0;
+  }
+  ol,
+  ul {
+    padding:15px 30px;
+  }
+  li {
+    padding:2.5px 0;
+    > strong {
+      padding-top:0;
+    }
+  }
+  ol {
+    background:$blue-1;
+    li {
+      > ul {
+        background:$blue-2;
+        ul {
+          background:$blue-3;
+          margin:15px 0;
+        }
+      }
+    }
+  }
+}
