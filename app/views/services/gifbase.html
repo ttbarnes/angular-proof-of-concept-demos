@@ -1,7 +1,11 @@
 <ul class="gifbase-service">
   <li ng-repeat="gif in gifs">
-    <img ng-src="{{gif.url}}" />
-    <br/>
-    <p class="tags">{{gif.tags}}</p>
+    <div class="inner">
+      <div class="img-wrap">
+        <img ng-src="{{gif.url}}" />
+      </div>
+      <br/>
+      <p class="tags">{{gif.tags}}</p>
+    </div>
   </li>
 </ul>

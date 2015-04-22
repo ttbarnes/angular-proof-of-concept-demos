@@ -1,0 +1,38 @@
+.gifbase-service {
+  margin:0;
+  padding:0;
+  li {
+    list-style-type:none;
+    text-align:center;
+    padding-bottom:10px;
+    box-sizing:border-box;
+    @media (min-width:$bp-small) {
+      float:left;
+      padding:10px;
+      width:33.333333333%;
+    }
+    &:nth-child(3n + 1) {
+      clear:both;
+    }
+    .inner {
+      background:#CCC;
+      padding:10px;
+    }
+    .img-wrap {
+      @media (min-width:$bp-small) {
+        max-height:180px;
+        overflow:hidden;
+      }
+    }
+    img {
+      width:100%;
+    }
+    p {
+      margin:0 0 5px 0;
+      word-break:break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens:auto;
+      hyphens:auto;
+    }
+  }
+}
