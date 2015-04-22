@@ -7,8 +7,8 @@ label {
 }
 
 input,
-.btn {
-  padding:1em;
+button {
+  padding:0.5em;
   font-size:14px;
   width:100%;
   @media (min-width:600px) {
@@ -16,16 +16,16 @@ input,
   }
 }
 
-.btn {
+button {
   background:$green-1;
   color:#FFF;
   border:0 none;
-  padding:1.5em 2em;
+  padding:1em 2em;
   -webkit-appearance:none;
 }
 
 input:disabled,
-.btn:disabled {
+button:disabled {
   background:$red-1;
 }
 

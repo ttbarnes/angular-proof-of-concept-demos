@@ -1,10 +1,15 @@
+<!-- 
+- where possble, ng-init should always be in a controller
+- for this demo's simplicity we will keep this in the view
+- otherwise we need to create a controller purely for ng-init
+-->
 <div ng-init="focus=false;blur=false;"></div>
 
-<input type="button" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" value="i'd like a drop down menu please" />
+<button ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;">i'd like a drop down menu please</button>
 
 <!-- alternatively -->
 <!--
-<input type="button" ng-focus="focus=true" ng-blur="focus=false;" value="toggle menu" />
+<button ng-focus="focus=true" ng-blur="focus=false;">i'd like a drop down menu please</button>
 -->
 
 <pre>focus: {{focus}} <br/>blur: {{blur}}</pre>
