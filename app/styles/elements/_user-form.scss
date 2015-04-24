@@ -1,13 +1,15 @@
 .user-form {
   label {
     padding-bottom:5px;
-    @media (min-width:600px) {
+    @media (min-width:$bp-small) {
       float:left;
       width:140px;
     }
   }
   .radio-wrap {
-    float:left;
+    @media (min-width:$bp-small) {
+      float:left;
+    }
     .row:first-child {
       padding-top:0;
     }
