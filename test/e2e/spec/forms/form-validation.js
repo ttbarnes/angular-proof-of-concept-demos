@@ -24,8 +24,8 @@ describe('page: forms - form-validation', function() {
 
   describe('initialisation', function(){
 
-    it('should have 6 rows defined', function(){
-      expect(rows.count()).toEqual(6);
+    it('should have 7 rows defined', function(){
+      expect(rows.count()).toEqual(7);
     });
 
     it('should have 6 labels defined', function(){
@@ -214,7 +214,8 @@ describe('page: forms - form-validation', function() {
 
     var label = element(by.css('.row.language-used label'));
     var input = element.all(by.css('.row.language-used input'));
-    var error = element(by.css('.row.language-used div.row.error'));
+    //var error = element(by.css('.row.language-used div.row.error'));
+    var error = element(by.css('.row.language-used span.error'));
 
     it('should have the correct html/angular label attribute', function(){
       expect(label.getAttribute('for')).toEqual('languageUsed');
@@ -371,7 +372,8 @@ describe('favourite url', function(){
 
     it('should have the correct congratulations copy ', function(){
       mockInputData();
-      expect(validationTextSuccess.getText()).toEqual('Congratulations! All fields have been entered correctly.');
+      expect(validationTextSuccess.getText()).toContain('Congratulations!');
+      expect(validationTextSuccess.getText()).toContain('All fields have been entered correctly.');
     });
 
   });
