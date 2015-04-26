@@ -38,8 +38,8 @@ angular.module('routes', ['ui.router'])
     },
     directives: {
       name: 'directives',
-      activeHoverDirective: {
-        name: 'directives.activeHoverDirective'
+      activeHover: {
+        name: 'directives.activeHover'
       },
       randomRobotImage: {
         name: 'directives.randomRobotImage'
@@ -158,11 +158,11 @@ angular.module('routes', ['ui.router'])
         url: '/directives',
         templateUrl: 'views/directives/index.html'
       })
-      .state(states.directives.activeHoverDirective.name, {
-        url: '/active-hover-directive',
+      .state(states.directives.activeHover.name, {
+        url: '/active-hover',
         templateUrl: 'views/directives/active-hover.html',
         data: {
-          pageTitle: 'active hover directive'
+          pageTitle: 'active hover'
         }
       })
       .state(states.directives.randomRobotImage.name, {
