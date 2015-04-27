@@ -17,12 +17,6 @@ describe('page: forms - disable-radio', function() {
   var selectionSuccess = element(by.className('selection-success'));
   var formSubmit = element(by.tagName('button'));
 
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
-
   describe('initialisation', function(){
 
     it('should have a form', function(){ 
@@ -41,6 +35,7 @@ describe('page: forms - disable-radio', function() {
     });
 
     it('should have 4 radio inputs with no selection', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       expect(formRadios.count()).toEqual(4);
       expect(hasClass(element(by.name('individual')), 'ngTouched')).toBe(false);
     });

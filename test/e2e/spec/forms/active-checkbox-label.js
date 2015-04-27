@@ -10,11 +10,6 @@ describe('page: forms - active-checkbox-label', function() {
     expect(pageTitle.getText()).toEqual('active checkbox label');
   });
 
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
 
   var listItems = element.all(by.css('.active-checkbox-label-wrap li'));
   var listItemsInnerDiv = element.all(by.css('.active-checkbox-label-wrap .inner'));
@@ -30,6 +25,7 @@ describe('page: forms - active-checkbox-label', function() {
     });
 
     it('should not have a checked class', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       expect(hasClass(element(by.css('.active-checkbox-label-wrap .inner')), 'checked')).toBe(false);
     });
 
@@ -58,11 +54,13 @@ describe('page: forms - active-checkbox-label', function() {
     var label = listItemsLabel.get(0);
 
     it('should add a checked class on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(0), 'checked')).toBe(true);
     });
 
     it('should remove a checked class on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label.click();
       label.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(0), 'checked')).toBe(false);
@@ -75,11 +73,13 @@ describe('page: forms - active-checkbox-label', function() {
     var label = listItemsLabel.get(1);
 
     it('should add a checked class on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(1), 'checked')).toBe(true);
     });
 
     it('should remove a checked class on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label.click();
       label.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(1), 'checked')).toBe(false);
@@ -92,11 +92,13 @@ describe('page: forms - active-checkbox-label', function() {
     var label = listItemsLabel.get(2);
 
     it('should add a checked class on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(2), 'checked')).toBe(true);
     });
 
     it('should remove a checked class on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label.click();
       label.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(2), 'checked')).toBe(false);
@@ -111,6 +113,7 @@ describe('page: forms - active-checkbox-label', function() {
     var label2 = listItemsLabel.get(2);
 
     it('should add checked classes on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label0.click();
       expect(hasClass(element.all(by.css('.active-checkbox-label-wrap .inner')).get(0), 'checked')).toBe(true);
       label1.click();
@@ -120,6 +123,7 @@ describe('page: forms - active-checkbox-label', function() {
     });
 
     it('should remove checked classes on label click', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       label0.click();
       label1.click();
       label2.click();

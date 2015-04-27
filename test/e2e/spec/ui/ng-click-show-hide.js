@@ -10,12 +10,6 @@ describe('page: ui - ng-click show/hide', function() {
     expect(pageTitle.getText()).toEqual('ng-click show/hide');
   });
 
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
-
   var button = element(by.css('.ng-click-show-hide-wrapper button'));
   var mainMessage = element(by.css('.ng-click-show-hide-wrapper p'));
 

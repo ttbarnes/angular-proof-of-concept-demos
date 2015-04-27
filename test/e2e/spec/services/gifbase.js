@@ -4,12 +4,6 @@ describe('page: services - gifbase service', function() {
     browser.get('http://localhost:9000/#/services/gifbase');
   });
 
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
-
   it('should have a header title defined', function(){ 
     var pageTitle = element.all(by.css('.page-title')).get(0);
     expect(pageTitle).toBeDefined();

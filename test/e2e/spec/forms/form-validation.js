@@ -10,12 +10,6 @@ describe('page: forms - form-validation', function() {
     expect(pageTitle.getText()).toEqual('form validation');
   });
 
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
-
   var rows = element.all(by.css('.user-form form > .row'));
   var label = element.all(by.css('.user-form label'));
   var input = element.all(by.css('.user-form input'));

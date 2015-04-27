@@ -10,12 +10,6 @@ describe('page: scope-watch - form completion value', function() {
     expect(pageTitle.getText()).toEqual('form completion value');
   });
 
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
-
   var formParent = element.all(by.css('ol'));
   var rows = element.all(by.css('.user-form form > .row'));
   var labels = element.all(by.css('.user-form label'));

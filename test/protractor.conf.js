@@ -47,6 +47,8 @@ exports.config = {
   //specs: ['e2e/spec/{,*/}*.js'],
   baseUrl: 'http://localhost:9001',
   onPrepare: function() {
+
+    protractor.helperHasClass = require('./e2e/helper-has-class.js');
     var SpecReporter = require('jasmine-spec-reporter');
     jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: true}));
 

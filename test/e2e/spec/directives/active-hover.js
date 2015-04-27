@@ -4,17 +4,11 @@ describe('page: directives - active-hover', function() {
     browser.get('http://localhost:9000/#/directives/active-hover');
   });
 
-  it('should have a header title defined', function(){ 
+  it('should have a header title defined', function(){
     var pageTitle = element.all(by.css('.page-title')).get(0);
     expect(pageTitle).toBeDefined();
     expect(pageTitle.getText()).toEqual('active hover');
   });
-
-  var hasClass = function (element, cls) {
-    return element.getAttribute('class').then(function (classes) {
-      return classes.split(' ').indexOf(cls) !== -1;
-    });
-  };
 
   var items = element.all(by.css('.active-hover-items div'));
   var item1 = items.get(0);
@@ -36,6 +30,7 @@ describe('page: directives - active-hover', function() {
     });
 
     it('should have 4 items with no class', function(){
+      var hasClass = protractor.helperHasClass.hasClass();
       expect(hasClass(item1, 'active-hover')).toBe(false);
       expect(hasClass(item1, 'inactive-hover')).toBe(false);
       expect(hasClass(item2, 'active-hover')).toBe(false);
