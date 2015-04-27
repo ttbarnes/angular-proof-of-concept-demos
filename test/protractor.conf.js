@@ -35,14 +35,13 @@ exports.config = {
         maxInstances: 1,
         browserName: 'chrome',
         specs: ['e2e/spec/services/*.js']
-    }
-    /*{
+    },
+    {
         shardTestFiles: false,
         maxInstances: 1,
         browserName: 'chrome',
         specs: ['e2e/spec/ui/*.js']
     }
-    */
   ],
   seleniumAddress: 'http://localhost:4444/wd/hub',
   //specs: ['e2e/spec/{,*/}*.js'],

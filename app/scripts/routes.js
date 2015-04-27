@@ -29,8 +29,8 @@ angular.module('routes', ['ui.router'])
     },
     services: {
       name: 'services',
-      simpleService: {
-        name: 'services.simpleService'
+      simple: {
+        name: 'services.simple'
       },
       gifbase: {
         name: 'services.gifbase'
@@ -134,9 +134,9 @@ angular.module('routes', ['ui.router'])
         url: '/services',
         templateUrl: 'views/services/index.html'
       })
-      .state(states.services.simpleService.name, {
-        url: '/simple-service',
-        templateUrl: 'views/services/simple-service.html',
+      .state(states.services.simple.name, {
+        url: '/simple',
+        templateUrl: 'views/services/simple.html',
         controller: 'simpleServiceCtrl',
         data: {
           pageTitle: 'simple service'

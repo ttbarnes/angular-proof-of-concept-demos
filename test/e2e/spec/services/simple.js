@@ -1,7 +1,7 @@
 describe('page: services - simple service', function() {
 
   beforeEach(function() {
-    browser.get('http://localhost:9000/#/services/simple-service');
+    browser.get('http://localhost:9000/#/services/simple');
   });
 
   it('should have a header title defined', function(){ 
@@ -10,7 +10,7 @@ describe('page: services - simple service', function() {
     expect(pageTitle.getText()).toEqual('simple service');
   });
 
-  var items = element.all(by.css('.simple-service li'));
+  var items = element.all(by.css('.simple li'));
 
   it('should have 3 items defined', function(){
     expect(items).toBeDefined();

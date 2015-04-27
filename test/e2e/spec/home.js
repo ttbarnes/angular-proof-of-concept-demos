@@ -91,7 +91,7 @@ describe('page: home', function() {
 
       it('should direct to the correct services views', function(){
         navLinks.get(0).click();
-        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/simple-service');
+        expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/services/simple');
       });
 
       it('should direct to the correct services views', function(){
