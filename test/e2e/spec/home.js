@@ -110,13 +110,11 @@ describe('page: home', function() {
       });
 
       it('should direct to the correct directives views - item 1', function(){
-        browser.get('http://localhost:9000/#/');
         navLinks.get(0).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/active-hover');
       });
 
       it('should direct to the correct directives views - item 2', function(){
-        browser.get('http://localhost:9000/#/');
         navLinks.get(1).click();
         expect(browser.driver.getCurrentUrl()).toEqual('http://localhost:9000/#/directives/random-robot-image');
       });
