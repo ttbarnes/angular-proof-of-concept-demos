@@ -1,12 +1,14 @@
 <ul class="active-checkbox-label-wrap">
   <li ng-repeat="item in items">
+
     <div class="inner" ng-class="{ checked : isChecked }">
-    <label for="{{item.title}}">
-      <input id="{{item.title}}"
-             type="checkbox"
-             ng-model="isChecked">{{item.title}}
-    </label>
-    <p><small>{{item.description}}</small></p>
+      <label for="{{item.title}}">
+        <input id="{{item.title}}"
+               type="checkbox"
+               ng-model="isChecked">{{item.title}}
+      </label>
+      <p><small>{{item.description}}</small></p>
     </div>
+
   </li>
 </ul>

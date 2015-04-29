@@ -12,4 +12,5 @@ angular.module('proofOfConceptDemos').factory('simpleService', function() {
       return characters[0];
     }
   };
+
 });

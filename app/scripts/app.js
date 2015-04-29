@@ -20,6 +20,5 @@ angular
       $rootScope.$on('$viewContentLoaded', function(){ 
         window.scrollTo(0, 0); 
       });
-
     }
   ]);

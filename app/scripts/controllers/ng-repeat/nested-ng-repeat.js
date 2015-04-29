@@ -34,7 +34,6 @@ angular.module('proofOfConceptDemos')
           }]
         }]
       }
-
     ];
 
   });

@@ -5,6 +5,7 @@ angular.module('proofOfConceptDemos').factory('gifbaseService', function ($http)
   var promise;
 
   var gifbase = {
+
     getTheGifs: function() {
 
       var apiURL = 'http://gifbase.com/';
@@ -22,6 +23,7 @@ angular.module('proofOfConceptDemos').factory('gifbaseService', function ($http)
 
       return promise;
     }
+
   };
 
   return {
