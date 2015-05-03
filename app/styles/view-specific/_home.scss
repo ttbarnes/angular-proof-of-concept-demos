@@ -1,32 +1,47 @@
 .home-nav {
   margin:0;
   padding:0;
+
   > li {
     list-style-type:none;
-    padding:{
-      bottom:10px;
-      left:0;
-    }
-    strong {
-      display:inline-block;
-      background:$grey-2;
-      padding:10px;
+    padding-bottom:15px;
+    @media (min-width:$bp-medium) {
+      float:left;
+      width:50%;
+      padding:{
+        right:10px;
+        bottom:20px;
+        left:10px;
+      }
+      &:nth-child(odd) {
+        clear:both;
+      }
     }
   }
-  > ol {
+
+  strong,
+  ol {
+    padding:10px;
+  }
+
+  strong {
+    display:block;
+    background:$grey-3;
+  }
+
+  ol {
     font-size:14px;
     padding:{
-      bottom:20px;
       left:32px;
     }
-    &:last-child {
-      padding-bottom:0;
-    }
+    background:$grey-2;
     > li {
       padding-bottom:10px;
     }
   }
+
   a {
     font-weight:normal;
   }
+
 }

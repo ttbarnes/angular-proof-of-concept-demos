@@ -26,7 +26,7 @@ describe('page: home', function() {
 
     it('should have 6 parent lists/list items', function(){
       var parentListItems = element.all(protractor.By.css('.home-nav > li'));
-      var parentLists = element.all(protractor.By.css('.home-nav > ol'));
+      var parentLists = element.all(protractor.By.css('.home-nav li ol'));
       expect(parentListItems.count()).toEqual(6);
       expect(parentLists.count()).toEqual(6);
     });
