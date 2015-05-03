@@ -2,8 +2,11 @@
 // endbower
 
 @import 'modules/_config';
+@import 'modules/_mixins';
+
 @import '_misc';
 @import '_typography';
+
 @import 'blocks/_layout-containers';
 @import 'blocks/_header';
 @import 'blocks/_footer';

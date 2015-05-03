@@ -1,0 +1,8 @@
+@mixin transition($s:false) {
+  @if $s {
+    transition:all $s ease;
+  }
+  @else {
+    transition:all 0.2s ease;
+  }
+}
