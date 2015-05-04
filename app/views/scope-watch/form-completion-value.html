@@ -1,4 +1,4 @@
-<div class="user-form">
+<div class="col-50 user-form">
   <form name="userForm">
 
     <div class="row user-name">
@@ -29,12 +29,14 @@
   </form>
 </div>
 
-<div class="row completion-info">
-  <p>name length: {{userName.length}}</p>
-  <p>about length: {{userAbout.length}}</p>
-  <p>favouriteColours length: {{userFavouriteColours.length}}</p>
-  <p>hobbies length: {{userHobbies.length}}</p>
-  <p>terms: {{userTerms}}</p>
-  <br/>
-  <p class="total"><strong>Completion: <span class="completion-total perc-{{completionTotal}}">{{completionTotal}}%</span></strong></p>
+<div class="col-50 completion-info">
+  <div class="inner">
+    <p>name length: {{userName.length}}</p>
+    <p>about length: {{userAbout.length}}</p>
+    <p>favouriteColours length: {{userFavouriteColours.length}}</p>
+    <p>hobbies length: {{userHobbies.length}}</p>
+    <p>terms: {{userTerms}}</p>
+    <br/>
+    <p class="total"><strong>Completion: <span class="completion-total perc-{{completionTotal}}">{{completionTotal}}%</span></strong></p>
+  </div>
 </div>

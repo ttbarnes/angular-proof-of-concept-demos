@@ -10,7 +10,7 @@ body {
   color:$black-1;
   font:{
     size:14px;
-    family:helvetica, arial
+    family:helvetica, arial;
   }
 }
 
@@ -27,4 +27,19 @@ footer {
   padding:0 10px 40px 10px;
   max-width:1200px;
   margin:0 auto;
+}
+
+.col-50 {
+  clear:both;
+  @media (min-width:$bp-medium) {
+    clear:none;
+    float:left;
+    width:50%;
+    &:first-child {
+      padding-right:10px;
+    }
+    &:last-child {
+      padding-left:10px;
+    }
+  }
 }

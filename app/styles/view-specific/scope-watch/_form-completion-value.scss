@@ -1,3 +1,15 @@
+.completion-info {
+  margin-top:40px;
+  @media (min-width:$bp-medium) {
+    margin-top:0;
+  }
+  .inner {
+    float:left;
+    background:$grey-2;
+    padding:10px;
+  }
+}
+
 .completion-total {
   padding:5px 10px;
   background:$green-1;
