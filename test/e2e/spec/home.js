@@ -18,6 +18,10 @@ describe('page: home', function() {
 
   });
 
+  var parentListItems = element.all(protractor.By.css('.home-nav > li'));
+  var parentLists = element.all(protractor.By.css('.home-nav li ol'));
+  var allListItems = element.all(protractor.By.css('.home-nav li'));
+
   describe('navigation', function(){
 
     it('should be defined', function(){
@@ -25,15 +29,12 @@ describe('page: home', function() {
     });
 
     it('should have 6 parent lists/list items', function(){
-      var parentListItems = element.all(protractor.By.css('.home-nav > li'));
-      var parentLists = element.all(protractor.By.css('.home-nav li ol'));
       expect(parentListItems.count()).toEqual(6);
       expect(parentLists.count()).toEqual(6);
     });
 
     it('should have the correct amount of list items ', function(){
-      var elements = element.all(protractor.By.css('.home-nav li'));
-      expect(elements.count()).toEqual(18);
+      expect(allListItems.count()).toEqual(18);
     });
 
     describe('forms', function(){
@@ -160,21 +161,22 @@ describe('page: home', function() {
 
   describe('footer', function(){
 
+    var footerGithub = element.all(by.css('footer li:first-child')).get(0);
+    var footerGithubLink = element.all(by.css('footer li:first-child a')).get(0);
+    var footerPortfolio = element.all(by.css('footer li:last-child')).get(0);
+    var footerPortfolioLink = element.all(by.css('footer li:last-child a')).get(0);
+
     it('should be defined', function(){ 
       expect(element(protractor.By.css('footer')).isPresent()).toBe(true);
     });
 
     it('should have a first child with a link to github project', function(){ 
-      var footerGithub = element.all(by.css('footer li:first-child')).get(0);
-      var footerGithubLink = element.all(by.css('footer li:first-child a')).get(0);
       expect(footerGithub.getText()).toEqual('github.com/ttbarnes/angular-proof-of-concept-demos');
       expect(footerGithubLink.getAttribute('href')).toEqual('http://github.com/ttbarnes/angular-proof-of-concept-demos');
       expect(footerGithubLink.getAttribute('target')).toEqual('_blank');
     });
 
     it('should have a first child with a link to portfolio', function(){ 
-      var footerPortfolio = element.all(by.css('footer li:last-child')).get(0);
-      var footerPortfolioLink = element.all(by.css('footer li:last-child a')).get(0);
       expect(footerPortfolio.getText()).toEqual('tonybarnes.me');
       expect(footerPortfolioLink.getAttribute('href')).toEqual('http://tonybarnes.me/');
       expect(footerPortfolioLink.getAttribute('target')).toEqual('_blank');
