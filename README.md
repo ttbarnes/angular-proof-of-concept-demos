@@ -1,4 +1,4 @@
-https://david-dm.org/ttbarnes/angular-proof-of-concept-demos.svg
+[![Dependency Status](https://david-dm.org/ttbarnes/angular-proof-of-concept-demos.svg)](http://tonybarnes.me)
 
 # Angular proof of concept demos
 POC demos with pure angular
