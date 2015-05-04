@@ -1,3 +1,5 @@
+https://david-dm.org/ttbarnes/angular-proof-of-concept-demos.svg
+
 # Angular proof of concept demos
 POC demos with pure angular
 
