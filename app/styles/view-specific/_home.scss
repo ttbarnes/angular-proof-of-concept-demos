@@ -34,16 +34,12 @@
   }
 
   ol {
-    padding:{
-      bottom:7px;
-      left:32px;
-    }
-    background:$grey-2;
-    border-bottom:solid 3px $grey-2;
+    padding-left:32px;
+    background:#F0F0F0;
     @media (min-width:$bp-medium) {
       @include transition;
       &:hover {
-        background:#F0F0F0;
+        background:$grey-2;
       }
     }
     > li {
