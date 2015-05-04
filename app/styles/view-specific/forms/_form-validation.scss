@@ -4,10 +4,10 @@
     display:block;
     clear:both;
     width:100%;
-    background:$red-1;
-    color:$white-1;
+    background:$pink-1;
     padding:5px 10px;
     margin:7.5px 0;
+    font-size:$font-size-small;
     @media (min-width:$bp-small) {
       display:initial;
       clear:none;
