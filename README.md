@@ -27,6 +27,7 @@ various examples of:
 - ng-repeat
 - services
 - directives
+- scope watch
 - ui
 - unit tests with jasmine, karma
 - e2e tests with protractor
@@ -48,6 +49,10 @@ Please note, [ui-router] (https://github.com/angular-ui/ui-router) is in use.
 You'll notice that instead of including routes in `app.js`, we have our own angular module called `routes`.
 
 In `app/scripts/routes.js`, we use [constants] (https://docs.angularjs.org/guide/providers) to manage our state names, and hook these up with ui-router `$stateProvider` in the config.
+
+## Why?
+
+Whilst I was getting to grips with angular and looking for some approaches, I put most things together in this app, before integrating into a 'real-world' app. I also found it a little challenging to find decent examples of some angular things - I hope this helps others to learn and understand.
 
 ## Contributions
 
