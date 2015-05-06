@@ -15,8 +15,6 @@ angular.module('proofOfConceptDemos').factory('gifbaseService', function ($http)
 
       if(!promise) {
         promise = $http.get(gifbaseQuery).then(function (response){
-          console.info('gifs are coming');
-          console.log(response);
           return response.data;
         });
       }
