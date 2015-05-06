@@ -57,7 +57,7 @@ describe('Service: gifbaseService', function(){
 
       spyOn(gifbaseConfig, 'configApiURL', 'configParamTag', 'configParamFormat', 'configQuery').and.callThrough();
 
-      gifbaseConfig.configApiURL('https://gifbase.com/');
+      gifbaseConfig.configApiURL('http://gifbase.com/');
       gifbaseConfig.configParamTag('tag/smile?');
       gifbaseConfig.configParamFormat('format=json');
       gifbaseConfig.configQuery('');
@@ -74,7 +74,7 @@ describe('Service: gifbaseService', function(){
     });
 
     it('should have the correct base api URL defined', function(){
-      expect(fetchApiURL).toEqual('https://gifbase.com/');
+      expect(fetchApiURL).toEqual('http://gifbase.com/');
     });
 
     it('should have the correct tag parameter defined', function(){
@@ -86,7 +86,7 @@ describe('Service: gifbaseService', function(){
     });
 
     it('should bla dlka sldf alskfdas', function(){
-      expect(fetchQuery).toEqual('https://gifbase.com/tag/smile?format=json');
+      expect(fetchQuery).toEqual('http://gifbase.com/tag/smile?format=json');
     });
 
   });
