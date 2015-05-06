@@ -167,9 +167,24 @@ module.exports = function (grunt) {
         ignorePath:  /\.\.\//,
         exclude: [
           'bower_components/jquery/dist/jquery.js',
-          'bower_components/jasmine-jquery/lib/jasmine-jquery.js'
+          'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+          'bower_components/SHA-1/sha1.js',
+          'bower_components/angulartics/src/angulartics-adobe.js',
+          'bower_components/angulartics/src/angulartics-chartbeat.js',
+          'bower_components/angulartics/src/angulartics-cnzz.js',
+          'bower_components/angulartics/src/angulartics-flurry.js',
+          'bower_components/angulartics/src/angulartics-ga-cordova.js',
+          'bower_components/angulartics/src/angulartics-gtm.js',
+          'bower_components/angulartics/src/angulartics-kissmetrics.js',
+          'bower_components/angulartics/src/angulartics-mixpanel.js',
+          'bower_components/angulartics/src/angulartics-piwik.js',
+          'bower_components/angulartics/src/angulartics-scroll.js',
+          'bower_components/angulartics/src/angulartics-segmentio.js',
+          'bower_components/angulartics/src/angulartics-splunk.js',
+          'bower_components/angulartics/src/angulartics-woopra.js',
+          'bower_components/angulartics/src/angulartics-marketo.js',
+          'bower_components/angulartics/src/angulartics-intercom.js'
         ]
-
       },
       test: {
         devDependencies: true,
