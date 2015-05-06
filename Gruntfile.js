@@ -169,6 +169,7 @@ module.exports = function (grunt) {
           'bower_components/jquery/dist/jquery.js',
           'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
           'bower_components/SHA-1/sha1.js',
+          'bower_components/waypoints/waypoints.js',
           'bower_components/angulartics/src/angulartics-adobe.js',
           'bower_components/angulartics/src/angulartics-chartbeat.js',
           'bower_components/angulartics/src/angulartics-cnzz.js',

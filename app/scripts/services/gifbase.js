@@ -8,7 +8,7 @@ angular.module('proofOfConceptDemos').factory('gifbaseService', function ($http)
 
     getTheGifs: function() {
 
-      var apiURL = 'http://gifbase.com/';
+      var apiURL = 'https://gifbase.com/';
       var paramTag = 'tag/smile?';
       var paramFormat = 'format=json';
       var gifbaseQuery = apiURL + paramTag + paramFormat;
