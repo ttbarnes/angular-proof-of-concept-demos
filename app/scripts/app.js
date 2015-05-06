@@ -7,7 +7,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'routes'
+    'routes',
+    'angulartics',
+    'angulartics.google.analytics'
   ])
   .config(function() {
     
